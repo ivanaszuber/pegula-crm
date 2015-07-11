@@ -1,0 +1,16 @@
+
+<div data-smart-include="components/dashboard/layout/header/headerView.html" class="placeholder-header"></div>
+<div data-ui-view="navigation" class="placeholder-header"></div>
+
+<div>
+    <div data-smart-include="components/dashboard/layout/leftSidebar/leftSidebarView.html"></div>
+
+    <div data-smart-router-animation-wrap="content content@app" data-wrap-for="#content" class="col col-8" id="main"
+         role="main">
+        <div data-ui-view="content" data-autoscroll="false" id="inner-main"></div>
+    </div>
+
+    <div data-ui-view="search"  class="col col-4"></div>
+
+</div>
+

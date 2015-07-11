@@ -1,0 +1,40 @@
+<div dropdown-right-click ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name"
+     class="ui-grid-cell" ng-class="{'ui-grid-row-header-cell': col.isRowHeader }" ui-grid-cell ng-controller="userRowController">
+
+    <div class="ajax-dropdown" id="ajax-dropdown">
+        <div>
+            <li>
+                <a data-ui-sref="app.editUser" title="User" class="activity-button dropdown-link"><i
+                        class="fa fa-lg fa-fw fa-info-circle fa-2x"></i> <span>View/Edit</span></a>
+            </li>
+
+            <li ng-show="$root.rootUser.status ==='active'">
+                <a ng-click="deactivateUser()" class="activity-button login-dropdown" ><i
+                        class="fa fa-lg fa-fw fa-minus-square-o fa-2x"></i> <span>Deactivate</span></a>
+            </li>
+        </div>
+    </div>
+
+</div>
+<script type="text/ng-template" id="deactivateUserView.html">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            &times;
+        </button>
+        <h4 class="modal-title">
+            Deactivate User
+        </h4>
+    </div>
+    <div class="modal-body">
+        <p>Please confirm deactivating the selected user.</p>
+    </div>
+    <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary" ng-click="deactivate()">
+            Confirm
+        </button>
+        <button type="button" class="btn btn-default" ng-click="closeModal()">
+            Cancel
+        </button>
+    </div>
+</script>

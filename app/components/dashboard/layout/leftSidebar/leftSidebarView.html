@@ -1,0 +1,35 @@
+<aside id="left-panel">
+    <nav>
+        <ul data-smart-menu>
+            <li>
+                <button id="new-button">
+                    <a id="activity" class="activity-dropdown" dropdown-toggle><span>NEW</span></a>
+                    <div class="ajax-dropdown">
+                        <div  data-toggle="buttons">
+                            <li >
+                                <a data-ui-sref="app.newUser"  class="activity-button"><i class="fa fa-lg fa-fw fa-user fa-2x"></i> <span>User</span></a>
+                            </li>
+                        </div>
+
+                    </div>
+                </button>
+            </li>
+
+            <li>
+                <a data-ui-sref="app.home({homeType: 'Users'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-sitemap"></i> <span
+                        class="menu-item-parent">Browse</span></a>
+            </li>
+
+
+            <li>
+                <a  title="Starred"><i class="fa fa-lg fa-fw fa-star"></i> <span
+                        class="menu-item-parent">Starred</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <span class="minifyme" data-action="minifyMenu" minify-menu>
+        <i class="fa fa-arrow-circle-left hit"></i>
+    </span>
+
+</aside>

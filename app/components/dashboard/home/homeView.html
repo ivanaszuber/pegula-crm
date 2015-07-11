@@ -1,0 +1,17 @@
+
+<div id="content" ng-switch="activeTab" ng-controller="homeController">
+
+    <div class="btn-group btn-group-justified" data-toggle="buttons">
+        <label class="btn btn-default" ng-class="{active : isActive(type.name)}"
+               ng-repeat="type in types" ng-click="setTab(type.name)" ui-sref-active="active" ui-sref="app.home({homeType: type.name})" >
+            <input type="radio" name="tab">
+            {{type.title}}
+        </label>
+    </div>
+
+    <div ng-switch-when="Users">
+        <div class="gridStyle"  ui-grid="gridUsers" ui-grid-selection ui-grid-auto-resize>
+        </div>
+    </div>
+
+</div>

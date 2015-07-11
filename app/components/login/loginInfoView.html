@@ -1,0 +1,22 @@
+<div class="login-info ng-cloak">
+    <span>
+        <a  href="" dropdown-toggle id="login-link">
+            <i class="fa fa-user"></i>
+                <span>{{user.email}}
+                </span>
+            <i class="fa fa-angle-down"></i>
+
+        </a>
+         <div class="ajax-dropdown" id="login-dropdown">
+             <div  data-toggle="buttons">
+                 <li>
+                     <a ui-sref="logout"  title="Logout" class="login-button"><i class="fa fa-sign-out"></i> <span>Logout</span></a>
+                 </li>
+                 <li>
+                     <a data-ui-sref="app.resetPassword" title="User" class="login-button"><i
+                             class="fa fa-lock "></i> <span>Reset Password</span></a>
+                 </li>
+             </div>
+         </div>
+     </span>
+</div>

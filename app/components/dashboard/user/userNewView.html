@@ -1,0 +1,83 @@
+<form class="form-horizontal" ng-controller="userNewController" ng-submit="create(userForm.$valid)" novalidate
+      name="userForm">
+    <header id="formHeader">
+        New User
+    </header>
+    <hr>
+    <div class="form-group"
+         ng-class="{ 'has-error' : userForm.firstName.$invalid && !userForm.firstName.$pristine && submitted || userForm.firstName.$error.required && submitted}">
+        <label class="col-sm-3 control-label">First name:</label>
+
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="user.first_name" name="firstName" required>
+            <p ng-show="userForm.firstName.$error.required && submitted" class="help-block">First name is required.</p>
+            <p ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine" class="help-block">First name is
+                required.</p>
+        </div>
+    </div>
+    <div class="form-group"
+         ng-class="{ 'has-error' : userForm.lastName.$invalid && !userForm.lastName.$pristine && submitted || userForm.lastName.$error.required && submitted}">
+        <label class="col-sm-3 control-label">Last name:</label>
+
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="user.last_name" name="lastName" required>
+            <p ng-show="userForm.lastName.$error.required && submitted" class="help-block">Last name is required.</p>
+            <p ng-show="userForm.lastName.$invalid && !userForm.lastName.$pristine" class="help-block">Last name is
+                required.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Roles:</label>
+
+        <div class="col-sm-8" id="roles">
+            <label class="checkbox" ng-repeat="userRole in userRoles">
+                <input type="checkbox" checklist-model="user.roles" checklist-value="userRole" name="roles">{{userRole}}
+            </label>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && submitted && !userForm.email.$pristine ||
+    userForm.email.$error.required && submitted ||
+    userForm.email.$error.email}">
+        <label class="col-sm-3 control-label">Email:</label>
+
+        <div class="col-sm-9">
+            <input type="email" name="email" class="form-control" ng-model="user.email" user-email ng-model-options="{ debounce: 100 }" required>
+            <p ng-show="userForm.email.$error.email" class="help-block">Email is already taken.</p>
+            <p ng-show="userForm.email.$error.required && submitted" class="help-block">Email is required.</p>
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine && !userForm.email.$error.email" class="help-block">Please enter a valid email.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Phone:</label>
+
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="user.phone" name="phone">
+        </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine || userForm.password.$error.required && submitted}">
+        <label class="col-sm-3 control-label">Password:</label>
+
+        <div class="col-sm-9">
+            <input type="password" name="password" class="form-control" ng-model="user.password" ng-minlength="6" required >
+            <p ng-show="userForm.password.$error.required && submitted" class="help-block">Password is required.</p>
+            <p ng-show="userForm.password.$error.minlength" class="help-block">Password is too short.</p>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : userForm.passwordConfirm.$invalid && !userForm.passwordConfirm.$pristine || userForm.passwordConfirm.$error.required && submitted}">
+        <label class="col-sm-3 control-label">Confirm password:</label>
+
+        <div class="col-sm-9">
+            <input type="password" name="passwordConfirm" class="form-control" ng-model="passwordConfirm" user-password="userForm.password"  required>
+            <p ng-show="userForm.passwordConfirm.$error.required && submitted" class="help-block">Confirm password is required.</p>
+            <p ng-show="userForm.passwordConfirm.$error.userPassword" class="help-block">Passwords don't match.</p>
+        </div>
+    </div>
+    <div class="form-group" >
+        <div class="col-sm-offset-3 col-sm-3">
+            <button type="submit" class="btn btn-primary form-btn" >Save</button>
+        </div>
+        <div class="col-sm-3">
+            <button type="submit" class="btn btn-default form-btn" onclick="window.history.back()" >Cancel</button>
+        </div>
+    </div>
+</form>

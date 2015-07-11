@@ -1,0 +1,52 @@
+<div id="second-header" data-sparkline-container>
+    <div class="col col-6 pull-left">
+        <div>
+            <div data-ui-sref-active="active" class="btn-header transparent pull-left" id="inbox">
+           <a title="Inbox" id="inbox-icon" >
+               <i class="fa fa-lg fa-fw fa-inbox fa-2x"></i>
+               <span id="inbox-title" >
+                   Inbox
+               </span></a>
+            </div>
+            <div class="pull-left">
+                <ui-breadcrumbs displayname-property="data.displayName">
+                </ui-breadcrumbs>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- pulled right: nav area -->
+    <div class="col col-16 pull-right">
+
+        <!-- collapse menu button -->
+        <div id="hide-menu" class="btn-header pull-right">
+        <span id="toggle" > <a title="Collapse Menu" data-action="minifyRightMenu" minify-right-menu><i
+                class="fa fa-info-circle"></i></a> </span>
+        </div>
+        <!-- end collapse menu -->
+
+        <div id="grid" class="btn-header  pull-right">
+        <span> <a ui-sref="grid" title="Switch grid" data-action="switchGrid"
+                  data-logout-msg="Switch grid"><i class="fa fa-th"></i></a> </span>
+        </div>
+
+        <div id="actions" class="btn-header  pull-right">
+        <span> <a ui-sref="actions" title="More actions" data-action="actions"
+                  data-logout-msg="More actions"><i
+            class="fa fa-ellipsis-v"></i></a> </span>
+        </div>
+
+        <div id="star" class="btn-header  pull-right">
+        <span> <a ui-sref="login" title="Favorites" data-action="favorites"
+                  data-logout-msg="Add o favorites"><i
+                class="fa fa-star"></i></a> </span>
+        </div>
+
+        <div id="plus" class="btn-header  pull-right">
+        <span> <a ui-sref="login" title="New item" data-action="newitems"
+                  data-logout-msg="Add new"><i
+                class="fa fa-plus-square"></i></a> </span>
+        </div>
+    </div>
+</div>

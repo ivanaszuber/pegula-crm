@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+<head>
+
+    <meta charset="utf-8">
+    <title> Pegula CRM</title>
+    <meta name="description" content="Pegula CRM">
+    <meta name="author" content="Ivana Zuber">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- #CSS Links -->
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/pegula-lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/pegula-lib/css/font-awesome.min.css">
+
+    <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="lib/pegula-lib/css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/pegula-lib/css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/pegula-lib/css/smartadmin-skins.min.css">
+
+    <!-- SmartAdmin AngularJS Fixes -->
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/pegula-lib/css/fixes.css">
+
+    <!-- Pegula custom styles-->
+    <link rel="stylesheet" type="text/css" href="lib/angular-ui-grid/ui-grid.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <!-- @endif -->
+
+
+    <!-- Use for production after building the project with grunt -->
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="../build/assets/css/a42174a0.style.cache.css">-->
+
+
+    <!-- #FAVICONS -->
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.png" type="image/x-icon">
+
+    <!-- #GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Ubuntu::400italic,700italic,300,400,700">
+
+
+</head>
+
+
+<body data-smart-device-detect
+      data-smart-fast-click
+      data-smart-layout
+      data-smart-page-title="Pegula CRM" class="smart-style-4" ng-controller="appController">
+
+<!-- ui-view container -->
+<div data-ui-view="root" data-autoscroll="false"></div>
+
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="lib/es5-shim/es5-shim.js"></script>
+<script src="lib/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+
+<script src="config/appConfig.js"></script>
+<script src="lib/requirejs/require.js" data-main="main.js"></script>
+
+</body>
+
+</html>

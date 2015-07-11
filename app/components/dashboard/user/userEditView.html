@@ -1,0 +1,44 @@
+<form class="form-horizontal" ng-controller="userEditController" ng-submit="update()"
+      name="userForm">
+    <header id="formHeader">
+        Modify User
+    </header>
+    <hr>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">First name:</label>
+
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="user.first_name" name="firstName" edit-input disabled="true">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Last name:</label>
+
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="user.last_name" name="lastName" edit-input disabled="true">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Phone:</label>
+
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="user.phone" name="phone" edit-input disabled="true">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Created on:</label>
+
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="user.created | date:'MM/dd/yyyy'" name="phone" disabled="true">
+        </div>
+    </div>
+    <div class="form-group" >
+        <div class="col-sm-offset-3 col-sm-3">
+            <button type="submit" class="btn btn-primary form-btn" >Save</button>
+        </div>
+        <div class="col-sm-3">
+            <button type="submit" class="btn btn-default form-btn" onclick="window.history.back()" >Cancel</button>
+        </div>
+    </div>
+</form>
