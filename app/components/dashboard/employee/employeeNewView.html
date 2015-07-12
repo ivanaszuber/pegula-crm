@@ -33,7 +33,7 @@
     <div class="form-group">
         <label class="col-sm-3 control-label">Roles:</label>
 
-        <div class="col-sm-8" id="roles">
+        <div class="col-sm-9" id="role">
             <select data-smart-select2 style="width:100%" class="select2" ng-model="employee.role"  name="select">
                 <option ng-repeat="role in employeeRoles" value="{{role}}">{{role}}</option>
             </select>
@@ -42,7 +42,7 @@
     <div class="form-group">
         <label class="col-sm-3 control-label">Status:</label>
 
-        <div class="col-sm-8" id="status">
+        <div class="col-sm-9" id="status">
             <select data-smart-select2 style="width:100%" class="select2" ng-model="employee.status"  name="select">
                 <option ng-repeat="status in employeeStatus" value="{{status}}">{{status}}</option>
             </select>
@@ -51,10 +51,10 @@
     <div class="form-group">
         <label class="col-sm-3 control-label">Date From:</label>
 
-        <div class="col-sm-8" id="date_from">
+        <div class="col-sm-9" id="date_from">
             <p class="input-group">
                 <input type="date" class="form-control" datepicker-popup ng-model="employee.date_from"
-                       is-open="mydp.openedDateFrom" close-text="Close" current-text="Today"/>
+                       is-open="mydp.openedDateFrom" close-text="Close" current-text="today"/>
                       <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="openDateFrom($event)"><i
                                 class="glyphicon glyphicon-calendar"></i></button>
@@ -66,10 +66,10 @@
     <div class="form-group">
         <label class="col-sm-3 control-label">Date To:</label>
 
-        <div class="col-sm-8" id="date_to">
+        <div class="col-sm-9" id="date_to">
             <p class="input-group">
                 <input type="date" class="form-control" datepicker-popup ng-model="employee.date_to"
-                       is-open="mydp.openedDateTo" close-text="Close" current-text="Today"/>
+                       is-open="mydp.openedDateTo" close-text="Close" current-text="today"/>
                       <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="openDateTo($event)"><i
                                 class="glyphicon glyphicon-calendar"></i></button>

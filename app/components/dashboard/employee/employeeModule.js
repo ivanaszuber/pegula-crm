@@ -72,7 +72,7 @@ define([
                             }
                         },
                         search: {
-                            templateUrl: 'components/dashboard/home/search/searchUsersView.html'
+                            templateUrl: 'components/dashboard/layout/rightSidebar/rightSidebarView.html'
                         },
                         navigation: {
                             templateUrl: 'components/dashboard/layout/navigation/navigationView.html'

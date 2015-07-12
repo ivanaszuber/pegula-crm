@@ -8,8 +8,8 @@
                         class="fa fa-lg fa-fw fa-info-circle fa-2x"></i> <span>View/Edit</span></a>
             </li>
 
-            <li ng-show="$root.rootUser.status ==='active'">
-                <a ng-click="deactivateUser()" class="activity-button login-dropdown" ><i
+            <li ng-show="$root.rootEmployee.status !=='deactivated'">
+                <a ng-click="deactivateEmployee()" class="activity-button login-dropdown" ><i
                         class="fa fa-lg fa-fw fa-minus-square-o fa-2x"></i> <span>Deactivate</span></a>
             </li>
         </div>

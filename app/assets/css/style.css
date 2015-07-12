@@ -2598,3 +2598,9 @@ ul.timeline > li > .timeline-panel:after {
     margin-top: -25px;
     margin-left: 50px;
 }
+
+header#formHeader {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 5px;
+}

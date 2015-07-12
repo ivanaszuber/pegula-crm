@@ -20,7 +20,6 @@ define([
     'components/dashboard/employees/employeesListModule',
     'components/dashboard/employees/employeesListService',
     'components/dashboard/employees/employeesListController',
-    'components/dashboard/home/search/searchUsersController',
     'components/dashboard/employees/gridRow/employeesRowController',
 
     'components/dashboard/employee/employeeModule',

@@ -45,8 +45,7 @@ define([
                     },
 
                     search: {
-                        templateUrl: 'components/dashboard/home/search/searchUsersView.html',
-                        controller: 'searchUsersController'
+                        templateUrl: 'components/dashboard/layout/rightSidebar/rightSidebarView.html'
                     },
 
                     navigation: {

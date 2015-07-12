@@ -18,9 +18,9 @@ define(['appModule'], function (module) {
         ];
 
         $scope.employeeStatus = [
-            'full_time',
-            'contract',
-            'candidate'
+            'Full Time',
+            'Contract',
+            'Candidate'
         ];
 
 

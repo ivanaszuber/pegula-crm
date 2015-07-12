@@ -28,8 +28,7 @@ define([
                                 'components/dashboard/employees/employeesListController',
                                 'components/dashboard/employee/employeeNewController',
                                 'components/dashboard/employee/employeeEditController',
-                                'components/login/loginInfoDirective',
-                                'components/dashboard/home/search/searchUsersController'
+                                'components/login/loginInfoDirective'
                             ])
                         }
                     }

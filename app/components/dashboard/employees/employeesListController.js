@@ -59,11 +59,11 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                         };
 
                         row.getStatusColor = function () {
-                            if (this.status === 'full_time') {
+                            if (this.status === 'Full Time') {
                                 return 'md md-person-outline green icon-color';
-                            } if (this.status === 'contract') {
+                            } if (this.status === 'Contract') {
                                 return 'md md-person-outline blue icon-color';
-                            } if (this.status === 'candidate') {
+                            } if (this.status === 'Candidate') {
                                 return 'md md-person-outline yellow icon-color';
                             }
                             else {
