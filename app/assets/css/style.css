@@ -590,6 +590,15 @@ tr.ng-scope {
 
 .btn-group-justified {
     margin-bottom: 15px;
+    background: #FAFAFA;
+}
+
+.btn-group-justified > .btn:not(.active) {
+    background: #EEEEEE;
+    opacity: 0.5;
+    height: 55px;
+    color:black;
+    border-right: 1px solid #DFDFDF;
 }
 
 .btn-group-justified > .btn, .btn-group-justified > .btn-group {

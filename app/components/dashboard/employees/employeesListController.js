@@ -33,10 +33,10 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                         {field: 'getFirstAndLastName()', displayName: 'Name',
                             cellTemplate: '<div class="ui-grid-cell-contents"><i ng-class="grid.appScope.getColor(row.entity.getStatusColor())"></i><div>{{grid.appScope.getName(row.entity.getFirstAndLastName())}}<div></div>'},
                         {field: 'role', displayName: 'Role'},
-                        {field: 'status', displayName: 'Status'},
+                        {field: 'status', displayName: 'Status', width:120},
                         {field: 'email', displayName: 'Email'},
-                        {field: 'date_from', displayName: 'Date From', cellFilter: "date:'yyyy-MM-dd'"},
-                        {field: 'date_to', displayName: 'Date To', cellFilter: "date:'yyyy-MM-dd'"}
+                        {field: 'date_from', displayName: 'Date From', cellFilter: "date:'yyyy-MM-dd'", width:120},
+                        {field: 'date_to', displayName: 'Date To', cellFilter: "date:'yyyy-MM-dd'", width:120}
                     ],
                     data: 'employeeData',
                     rowTemplate: 'components/dashboard/employees/gridRow/employeesRowView.html',
