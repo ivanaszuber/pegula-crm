@@ -1,5 +1,5 @@
 <div dropdown-right-click ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name"
-     class="ui-grid-cell" ng-class="{'ui-grid-row-header-cell': col.isRowHeader }" ui-grid-cell ng-controller="userRowController">
+     class="ui-grid-cell" ng-class="{'ui-grid-row-header-cell': col.isRowHeader }" ui-grid-cell ng-controller="employeesRowController">
 
     <div class="ajax-dropdown" id="ajax-dropdown">
         <div>
@@ -26,7 +26,7 @@
         </h4>
     </div>
     <div class="modal-body">
-        <p>Please confirm deactivating the selected user.</p>
+        <p>Please confirm deactivating the selected employee.</p>
     </div>
     <div class="modal-footer">
 

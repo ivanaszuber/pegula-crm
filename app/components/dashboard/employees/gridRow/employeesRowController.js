@@ -4,24 +4,24 @@
 define(['appModule'], function(module){
     "use strict";
 
-    return module.registerController('userRowController', function($scope, $modal, $log, userService, $rootScope){
+    return module.registerController('employeesRowController', function($scope, $modal, $log, employeeService, $rootScope){
 
         /**
          * Opens the modal with a confirmation button
          * and message
-         * Upon confirmation the user status is set to 'deactivated'
+         * Upon confirmation the employee status is set to 'deactivated'
          */
-        $scope.deactivateUser = function () {
+        $scope.deactivateEmployee = function () {
             $modal.open({
-                templateUrl: 'deactivateUserView.html',
+                templateUrl: 'deactivateEmployeeView.html',
                 controller: function($scope, $modalInstance){
                     $scope.deactivate = function(){
-                        userService.deactivateUser($rootScope.selectedUser).then(function(){
+                        employeeService.deactivateEmployee($rootScope.selectedEmployee).then(function(){
                             //Getting the udated data from the server
-                            userService.getUsers().then(function (data) {
-                                //calling the root function (set in homeConroller)
+                            employeeService.getEmployees().then(function (data) {
+                                //calling the root function (set in employeeController)
                                 //to update the data in the grid
-                                $rootScope.setUserData(data);
+                                $rootScope.setEmployeeData(data);
                             });
                             $modalInstance.close();
                         });

@@ -10,8 +10,8 @@ define(['appModule'], function (module) {
         var rolesService = {
 
             /**
-             * Gets all user roles in the system that can be assigned
-             * to the user belonging to the provided org_type
+             * Gets all employee roles in the system that can be assigned
+             * to the employee belonging to the provided org_type
              * and returns a promise
              * @returns {*}
              */

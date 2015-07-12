@@ -8,30 +8,30 @@ define(['appModule'], function (module) {
 
     'use strict';
 
-    return module.registerFactory('userService', function (apiService) {
+    return module.registerFactory('employeeService', function (apiService) {
 
-        var userService = {
+        var employeeService = {
 
             /**
              * Gets the employee with the provided email and returns a promise
              * @param email
              * @returns {*}
              */
-            'getUser': function (email) {
+            'getEmployee': function (email) {
                 return apiService.request({
                     'method': "GET",
-                    'url': "/users/" + email
+                    'url': "/employees/" + email
                 })
             },
 
             /**
-             * Gets the list of all users and returns a promise
+             * Gets the list of all employees and returns a promise
              * @returns {*}
              */
-            'getUsers': function () {
+            'getEmployees': function () {
                 return apiService.request({
                     'method': "GET",
-                    'url': "/users"
+                    'url': "/employees"
                 })
             },
 
@@ -41,10 +41,10 @@ define(['appModule'], function (module) {
              * @param employee
              * @returns {*}
              */
-            'createUser': function (employee) {
+            'createEmployee': function (employee) {
                 return apiService.request({
                     'method': "POST",
-                    'url': "/users",
+                    'url': "/employees",
                     'data': employee
                 });
             },
@@ -56,24 +56,24 @@ define(['appModule'], function (module) {
              * @param employee
              * @returns {*}
              */
-            'updateUser': function (email, employee) {
+            'updateEmployee': function (email, employee) {
                 return apiService.request({
                     method: "PUT",
-                    url: "/users/" + email,
+                    url: "/employees/" + email,
                     data: employee
                 });
             },
 
             /**
-             * Gets all users that match the criteria passed in data
+             * Gets all employees that match the criteria passed in data
              * and returns a promise
              * @param data
              * @returns {*}
              */
-            'searchUsers': function (data) {
+            'searchEmployees': function (data) {
                 return apiService.request({
                     'method': "GET",
-                    'url': "/users",
+                    'url': "/employees",
                     'params':{
                         'search' : data
                     }
@@ -86,10 +86,10 @@ define(['appModule'], function (module) {
              * @param email
              * @returns {*}
              */
-            'deactivateUser': function(email){
+            'deactivateEmployee': function(email){
                 return apiService.request({
                     'method': 'PATCH',
-                    'url': '/users/' + email,
+                    'url': '/employees/' + email,
                     'data': {
                         'status': 'deactivated'
                     }
@@ -97,6 +97,6 @@ define(['appModule'], function (module) {
             }
         }
 
-        return userService;
+        return employeeService;
     })
 });

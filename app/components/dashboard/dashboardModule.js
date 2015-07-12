@@ -25,9 +25,9 @@ define([
                         templateUrl: 'components/dashboard/dashboardView.html',
                         resolve: {
                             deps: $couchPotatoProvider.resolveDependencies([
-                                'components/dashboard/home/homeController',
-                                'components/dashboard/user/userNewController',
-                                'components/dashboard/user/userEditController',
+                                'components/dashboard/employees/employeesListController',
+                                'components/dashboard/employee/employeeNewController',
+                                'components/dashboard/employee/employeeEditController',
                                 'components/login/loginInfoDirective',
                                 'components/dashboard/home/search/searchUsersController'
                             ])

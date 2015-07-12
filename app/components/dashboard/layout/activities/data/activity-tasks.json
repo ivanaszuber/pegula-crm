@@ -1,0 +1,48 @@
+{
+	"title":"Tasks",
+	"length":4,
+	"data":[
+		{
+			"status":"URGENT",
+			"type":"progress-md progress-striped",
+			"title":"Upgrade Infestructure",
+			"width":85,
+			"last_update":"12/12/2013"
+		},
+		{
+			"status":"URGENT",
+			"type":"progress-sm",
+			"title":"Code foundation",
+			"width":65,
+			"last_update":"12/12/2013"
+		},
+		{
+			"status":"Project Plan",
+			"type":"progress-xs",
+			"title":"Code foundation",
+			"width":25,
+			"last_update":"12/12/2013"
+		},
+		{
+			"status":"CRITICAL",
+			"type":"progress-xs",
+			"title":"Wireframes",
+			"width":5,
+			"last_update":"12/12/2013"
+		},
+		{
+			"status":"NORMAL",
+			"type":"progress-xs",
+			"title":"Compile hotfix",
+			"width":99,
+			"last_update":"12/12/2013"
+		},
+		{
+			"status":"MINOR",
+			"type":"progress-micro",
+			"title":"Bug fix #213",
+			"width":100,
+			"last_update":"12/12/2013"
+		}
+	]
+}

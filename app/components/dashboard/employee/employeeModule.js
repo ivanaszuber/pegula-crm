@@ -13,19 +13,19 @@ define([
 
         'use strict';
 
-        var userModule = ng.module('userModule', [
+        var employeeModule = ng.module('employeeModule', [
             'ui.router',
             'ngResource',
             'ngSanitize'
         ]);
 
-        couchPotato.configureApp(userModule);
+        couchPotato.configureApp(employeeModule);
 
-        userModule.config(function ($stateProvider, $couchPotatoProvider) {
+        employeeModule.config(function ($stateProvider, $couchPotatoProvider) {
 
             $stateProvider
-                .state('app.browse.newUser', {
-                    url: '/user/new',
+                .state('app.newEmployee', {
+                    url: '/employee/new',
                     reloadOnSearch: false,
                     onEnter: function () {
                         $('body').addClass("minifiedRight");
@@ -35,48 +35,47 @@ define([
                     },
                     views: {
                         "content@app": {
-                            controller: 'userNewController',
-                            templateUrl: 'interfaces/management/user/userNewView.html',
+                            controller: 'employeeNewController',
+                            templateUrl: 'components/dashboard/employee/employeeNewView.html',
                             resolve: {
                                 deps: $couchPotatoProvider.resolveDependencies([
-                                    'shared/apiServices/apiService',
-                                    'shared/apiServices/userService',
-                                    'interfaces/management/user/userEmailDirective',
-                                    'interfaces/management/user/userPasswordDirective'
+                                    'api/apiService',
+                                    'api/userService',
+                                    'components/dashboard/employee/employeeEmailDirective'
                                 ])}
                             },
-                        rightSidebar: {},
-                        subHeader: {
-                            templateUrl: 'interfaces/management/browse/subHeader/subheaderView.html'
+                        search: {},
+                        navigation: {
+                            templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                         }
                     },
                     data: {
-                        displayName: 'New User'
+                        displayName: 'New Employee'
                     }
                 })
 
-                .state('app.browse.editUser', {
-                    url: '/user/edit',
+                .state('app.editEmployee', {
+                    url: '/employee/edit',
                     reloadOnSearch: false,
                     onEnter: function () {
                         $('body').removeClass("minifiedRight");
                     },
                     views: {
                         "content@app": {
-                            controller: 'userEditController',
-                            templateUrl: 'interfaces/management/user/userEditView.html',
+                            controller: 'employeeEditController',
+                            templateUrl: 'components/dashboard/employee/employeeEditView.html',
                             resolve: {
                                 deps: $couchPotatoProvider.resolveDependencies([
-                                    'shared/apiServices/apiService',
-                                    'shared/apiServices/userService'
+                                    'api/apiService',
+                                    'api/userService'
                                 ])
                             }
                         },
-                        rightSidebar: {
-                            templateUrl: 'interfaces/management/approvals/rightSidebar/filterApprovalsView.html'
+                        search: {
+                            templateUrl: 'components/dashboard/home/search/searchUsersView.html'
                         },
-                        subHeader: {
-                            templateUrl: 'interfaces/management/browse/subHeader/subheaderView.html'
+                        navigation: {
+                            templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                         }
                     },
                     data: {
@@ -89,9 +88,9 @@ define([
 
         });
 
-        userModule.run(function ($couchPotato) {
-            userModule.lazy = $couchPotato;
+        employeeModule.run(function ($couchPotato) {
+            employeeModule.lazy = $couchPotato;
         });
 
-        return userModule;
+        return employeeModule;
     });

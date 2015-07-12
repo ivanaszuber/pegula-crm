@@ -5,7 +5,7 @@ define(['components/login/loginModule'], function (module) {
 
     "use strict";
 
-    module.registerController('loginController', function ($scope, $state, $location, authService, userService, $sessionStorage, $timeout, homeService, clientService) {
+    module.registerController('loginController', function ($scope, $state, $location, authService, userService, $sessionStorage, $timeout, employeeService, clientService) {
 
         $scope.model = {'email': '', 'password': ''};
 
@@ -13,8 +13,8 @@ define(['components/login/loginModule'], function (module) {
             $scope.errors = [];
 
             /**
-             * Login in the user with the provided email and password
-             * Then store the user and the user's client is $sessionStorage
+             * Login in the employee with the provided email and password
+             * Then store the employee and the employee's client is $sessionStorage
              * to be used throughout the app
              */
             authService.login($scope.model.email, $scope.model.password)
@@ -34,7 +34,7 @@ define(['components/login/loginModule'], function (module) {
 
                     /**
                      * Set the tabs of the home page
-                     * Visible tabs depend on the logged in user's permissions
+                     * Visible tabs depend on the logged in employee's permissions
                      * so they have to be reset o every login/logout
                      */
                     $scope.dashboardTabs = function () {
@@ -42,9 +42,9 @@ define(['components/login/loginModule'], function (module) {
                             //Since the service data is persistent even after logout we need to
                             //clear the data o logout (done in appController) and set the data
                             //here again. Is there a better alternative? (besides doing a full reload)
-                            homeService.types = [{
+                            employeeService.types = [{
                                 "title": "USERS",
-                                "name": "Users"
+                                "name": "All"
                             }]
 
                         })
@@ -52,14 +52,14 @@ define(['components/login/loginModule'], function (module) {
 
 
                     /**
-                     * Once the user has logged in and there was enough time to store the data in $sessionStorage
-                     * go to the app.home state and set the active tab to Users
+                     * Once the employee has logged in and there was enough time to store the data in $sessionStorage
+                     * go to the app.employees state and set the active tab to All
                      */
                     $scope.goHome = function(){
                         //We need to put this in a timeout, otherwise $localStorage won't have time to write the data
                         //This needs to be refactored, as even a timeout of 500 is sometimes not enough
                         ($timeout(function () {
-                            $state.go('app.home', {homeType: 'Users'});
+                            $state.go('app.employees', {employeesType: 'All'});
                         }), 1000);
                     };
 

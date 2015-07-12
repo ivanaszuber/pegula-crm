@@ -51,7 +51,7 @@ define(['appModule'], function (module) {
                             }
                             // or if the data is null, then there was a timeout.
                             if (data == null) {
-                                // Inject a non field error alerting the user
+                                // Inject a non field error alerting the employee
                                 // that there's been a timeout error.
                                 data = {};
                                 data['status'] = 0;
@@ -64,7 +64,7 @@ define(['appModule'], function (module) {
             },
 
             /**
-             * Logs in the user with the provided email and password
+             * Logs in the employee with the provided email and password
              * and broadcasts the success message to be used by appController
              * @param email
              * @param password
@@ -91,7 +91,7 @@ define(['appModule'], function (module) {
             },
 
             /**
-             * Logs the user out of the system and broadcasts the sucess message
+             * Logs the employee out of the system and broadcasts the sucess message
              * to be used by appController
              * @returns {*}
              */
@@ -109,7 +109,7 @@ define(['appModule'], function (module) {
             },
 
             /**
-             * Resets the user password
+             * Resets the employee password
              * @param old_password
              * @param new_password1
              * @param new_password2
@@ -128,7 +128,7 @@ define(['appModule'], function (module) {
             },
 
             /**
-             * Verifies if the user is authorized in the system
+             * Verifies if the employee is authorized in the system
              * @param restrict
              * @param force
              * @returns {*}
@@ -142,7 +142,7 @@ define(['appModule'], function (module) {
                 if (this.authPromise == null || force) {
                     this.authPromise = this.request({
                         'method': "GET",
-                        'url': "/user/"
+                        'url': "/employee/"
                     })
                 }
                 var da = this;

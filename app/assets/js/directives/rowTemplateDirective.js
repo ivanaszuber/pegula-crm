@@ -1,10 +1,10 @@
 /**
  * Created by Ivana on 17.5.2015..
  */
-define(['components/dashboard/home/homeModule'], function(homeModule){
+define(['components/dashboard/employees/employeesListModule'], function(employeeModule){
     "use strict";
 
-    return homeModule.directive('dropdownRightClick', function() {
+    return employeeModule.directive('dropdownRightClick', function() {
 
         /**
          * Display a dropdown box on rightClick

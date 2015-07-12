@@ -8,13 +8,13 @@ define(['appModule'], function (module) {
 
                 /**
                  * For each element id checks the appropriate permissions
-                 * and based on logged in user's permissions hides/shows the element
+                 * and based on logged in employee's permissions hides/shows the element
                  */
                 return {
                     restrict: 'A',
                     link: function (scope, element) {
-                        scope.userRoles = $sessionStorage.user.roles;
-                        scope.org_type = $sessionStorage.client.org_type;
+                        //scope.userRoles = $sessionStorage.user.roles;
+                        //scope.org_type = $sessionStorage.client.org_type;
 
                     }
                 };

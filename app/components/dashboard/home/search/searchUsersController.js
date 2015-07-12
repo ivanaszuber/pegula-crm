@@ -1,7 +1,7 @@
 /**
  * Created by Ivana on 14.5.2015..
  */
-define(['components/dashboard/home/homeModule', 'lodash', 'moment'], function (module, _, moment) {
+define(['components/dashboard/employees/employeesListModule', 'lodash', 'moment'], function (module, _, moment) {
     "use strict";
 
     return module.registerController("searchUsersController", searchUsersController);

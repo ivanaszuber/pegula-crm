@@ -27,7 +27,8 @@ define([
 
         'loginModule',
         'dashboardModule',
-        'homeModule',
+        'employeeModule',
+        'employeesListModule',
         'userModule'
     ]);
 

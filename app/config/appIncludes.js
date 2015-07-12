@@ -13,20 +13,30 @@ define([
     'api/userService',
     'api/clientService',
     'api/rolesService',
+    'api/employeeService',
 
     //components
     'components/dashboard/dashboardModule',
-    'components/dashboard/home/homeModule',
-    'components/dashboard/home/homeService',
-    'components/dashboard/home/homeController',
+    'components/dashboard/employees/employeesListModule',
+    'components/dashboard/employees/employeesListService',
+    'components/dashboard/employees/employeesListController',
     'components/dashboard/home/search/searchUsersController',
-    'components/dashboard/home/gridRow/userRowController',
+    'components/dashboard/employees/gridRow/employeesRowController',
+
+    'components/dashboard/employee/employeeModule',
+    'components/dashboard/employee/employeeEditController',
+    'components/dashboard/employee/employeeNewController',
+    'components/dashboard/employee/employeeEmailDirective',
 
     'components/dashboard/user/userModule',
     'components/dashboard/user/userEditController',
     'components/dashboard/user/userNewController',
     'components/dashboard/user/userEmailDirective',
     'components/dashboard/user/userPasswordDirective',
+
+    'components/dashboard/layout/activities/activitiesController',
+    'components/dashboard/layout/activities/activitiesDirective',
+    'components/dashboard/layout/activities/activitiesService',
 
 
     //SHARED

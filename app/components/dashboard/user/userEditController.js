@@ -1,6 +1,9 @@
 /**
  * Created by Ivana on 1.6.2015..
  */
+/**
+ * Created by Ivana on 28.5.2015..
+ */
 define(['appModule'], function (module) {
 
     'use strict';
@@ -23,7 +26,7 @@ define(['appModule'], function (module) {
          */
         $scope.update = function () {
             userService.updateUser($rootScope.selectedUser, $scope.user).then(function () {
-                $state.go('app.home', {homeType:'Users'});
+                $state.go('app.browse', {browseType:'Users'});
                 $.smallBox({
                     title: "User "+ $scope.user.first_name + ' ' + $scope.user.last_name + ' has been modified.',
                     color: "#739E73",

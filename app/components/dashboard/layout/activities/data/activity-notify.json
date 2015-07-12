@@ -1,0 +1,21 @@
+{
+	"title":"Notify",
+	"length":3,
+	"data":[
+		{
+			"icon":"fa-user",
+			"message":"2 new users just signed up! martin.luther and kevin.reliey",
+			"time":	"1 min ago..."					
+		},
+		{
+			"icon":"fa-facebook",
+			"message":"Facebook recived +33 unique likes",
+			"time":	"4 hrs ago..."
+		},
+		{
+			"icon":"fa-check",
+			"message":"2 projects were completed on time! Submitted for your approval - Click here",
+			"time":	"1 day ago..."
+		}
+	]
+}

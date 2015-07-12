@@ -14,7 +14,7 @@ define(['appModule'], function (module) {
 
         /**
          * Checks if the submitted password is valid and calls the authService function to
-         * reset the user password
+         * reset the employee password
          * Displays a notification
          * @param isValid
          */
@@ -23,7 +23,7 @@ define(['appModule'], function (module) {
 
             if (isValid){
                 authService.resetPassword($scope.old_password, $scope.new_password1, $scope.new_password2).then(function () {
-                    $state.go('app.home', {homeType:'Users'});
+                    $state.go('app.employees', {employeesType:'All'});
                     $.smallBox({
                         title: "User password has been reset.",
                         color: "#739E73",

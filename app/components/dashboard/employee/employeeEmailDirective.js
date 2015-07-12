@@ -8,7 +8,7 @@ define(['appModule'], function (module) {
 
         /**
          * Check if the provided email is already used
-         * by another user in the system. If it is display the appropriate
+         * by another employee in the system. If it is display the appropriate
          * error message
          */
         return {
@@ -28,7 +28,7 @@ define(['appModule'], function (module) {
                     var value = modelValue || viewValue;
 
                     $http({
-                        url: 'http://localhost:8080/api/auth/users/' + value,
+                        url: 'http://localhost:5050/api/v1/users/' + value,
                         method: 'GET'
                     })
                         .success(angular.bind(this, function () {

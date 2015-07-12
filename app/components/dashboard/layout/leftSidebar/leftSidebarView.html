@@ -6,8 +6,31 @@
                     <a id="activity" class="activity-dropdown" dropdown-toggle><span>NEW</span></a>
                     <div class="ajax-dropdown">
                         <div  data-toggle="buttons">
-                            <li >
-                                <a data-ui-sref="app.newUser"  class="activity-button"><i class="fa fa-lg fa-fw fa-user fa-2x"></i> <span>User</span></a>
+                            <li>
+                                <a data-ui-sref="app.newEmployee" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-group fa-2x"></i> <span
+                                        class="menu-item-parent">New Employee</span></a>
+                            </li>
+
+                            <li>
+                                <a data-ui-sref="app.newOrganization" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-building-o fa-2x"></i> <span
+                                        class="menu-item-parent">New Organization</span></a>
+                            </li>
+
+                            <li>
+                                <a data-ui-sref="app.newProject" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-suitcase fa-2x"></i> <span
+                                        class="menu-item-parent">New Project</span></a>
+                            </li>
+
+                            <li>
+                                <a data-ui-sref="app.newEmail" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-envelope-o fa-2x"></i> <span
+                                        class="menu-item-parent">New Email</span></a>
+                            </li>
+
+
+
+                            <li>
+                                <a  title="Starred"><i class="fa fa-lg fa-fw fa-star fa-2x"></i> <span
+                                        class="menu-item-parent">Favorites</span></a>
                             </li>
                         </div>
 
@@ -16,14 +39,45 @@
             </li>
 
             <li>
-                <a data-ui-sref="app.home({homeType: 'Users'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-sitemap"></i> <span
-                        class="menu-item-parent">Browse</span></a>
+                <a data-ui-sref="app.employees({employeesType: 'All'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-cog fa-2x"></i> <span
+                        class="menu-item-parent">Dashboard</span></a>
             </li>
 
 
             <li>
-                <a  title="Starred"><i class="fa fa-lg fa-fw fa-star"></i> <span
-                        class="menu-item-parent">Starred</span></a>
+                <a data-ui-sref="app.employees({employeesType: 'All'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-group fa-2x"></i> <span
+                        class="menu-item-parent">Employees</span></a>
+            </li>
+
+            <li>
+                <a data-ui-sref="app.organizations({organizationType: 'All'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-building-o fa-2x"></i> <span
+                        class="menu-item-parent">Organizations</span></a>
+            </li>
+
+            <li>
+                <a data-ui-sref="app.projects({projectType: 'All'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-suitcase fa-2x"></i> <span
+                        class="menu-item-parent">Projects</span></a>
+            </li>
+
+            <li>
+                <a data-ui-sref="app.email({projectType: 'All'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-envelope-o fa-2x"></i> <span
+                        class="menu-item-parent">Email</span></a>
+            </li>
+
+            <li>
+                <a data-ui-sref="app.tasks({projectType: 'All'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-check-square-o fa-2x"></i> <span
+                        class="menu-item-parent">Tasks</span></a>
+            </li>
+
+            <li>
+                <a data-ui-sref="app.reports({projectType: 'All'})" data-ui-sref-active="active"><i class="fa fa-lg fa-fw fa-bar-chart-o fa-2x"></i> <span
+                        class="menu-item-parent">Reports</span></a>
+            </li>
+
+
+            <li>
+                <a  title="Starred"><i class="fa fa-lg fa-fw fa-star fa-2x"></i> <span
+                        class="menu-item-parent">Favorites</span></a>
             </li>
         </ul>
     </nav>

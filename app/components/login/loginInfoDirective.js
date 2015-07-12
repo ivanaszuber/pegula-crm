@@ -7,7 +7,7 @@ define(['appModule'], function(module){
     return module.registerDirective('loginInfo', function($sessionStorage ){
 
         /**
-         * Used to display the small dropdown with user email
+         * Used to display the small dropdown with employee email
          * and login/reset password options
          */
         return {

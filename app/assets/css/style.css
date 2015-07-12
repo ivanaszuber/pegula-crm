@@ -33,7 +33,7 @@ div#login-dropdown {
 /*=================TOP HEADER=================*/
 .smart-style-4 #header {
     display: block;
-    height: 49px;
+    height: 55px;
     padding: 0 13px 0 0;
     background: none, #ffffff none;
     box-shadow: none;
@@ -63,15 +63,19 @@ div#login-dropdown {
 #logo img {
     margin-top: 8px;
     padding-left: 5px;
-    width: 140px;
+    width: 185px;
 }
 
 .smart-style-4 #header > :first-child {
-    height: 49px;
+    height: 55px;
     background: #fff none;
     box-shadow: none;
     position: relative;
     z-index: 905
+}
+
+#logo-group > span {
+    height: 55px;
 }
 
 .header-search > input[type=text] {
@@ -190,8 +194,8 @@ div#login-dropdown {
     text-align: left;
 }
 
-.minified .login-info{
-    border-bottom:0px;
+.minified .login-info {
+    border-bottom: 0px;
 }
 
 /*====================BOTTOM HEADER===========================*/
@@ -233,11 +237,16 @@ div#login-dropdown {
     font-weight: 700;
     color: #fff;
     line-height: 1.1 !important;
-    vertical-align: baseline;
+    vertical-align: top;
     white-space: nowrap;
     text-align: center;
     background-color: #98CA46;
     border-radius: 100px;
+    margin-right: 5px;
+}
+
+i.fa.fa-bell {
+    margin-top: 10px;
 }
 
 .minified .inbox-badge {
@@ -280,7 +289,7 @@ span#inbox-title {
     font-weight: lighter;
     background: #FAFAFA;
     color: #555555;
-    margin-left: 70px;
+    margin-left: 5px;
 }
 
 .breadcrumb li {
@@ -347,7 +356,7 @@ span#inbox-title {
 }
 
 .minified #left-panel, .minified nav > ul > li {
-    width: 47px;
+    width: 57px;
     border-bottom: 1px solid #C6C6C6;
     border-top: 0px;
 }
@@ -375,7 +384,7 @@ span#inbox-title {
 }
 
 nav ul {
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 .smart-style-4 nav > ul > li > a {
@@ -422,7 +431,8 @@ nav ul li.active > a:before {
 
 #new-button {
     margin-left: 40px;
-    width: 135px;
+    width: 145px;
+    height: 35px;
     margin-bottom: 10px;
     border: 0 solid;
     border-radius: 3px;
@@ -431,6 +441,7 @@ nav ul li.active > a:before {
 
 #new-button a {
     color: white;
+    margin-top: -5px;
 }
 
 #new-button a:hover {
@@ -465,13 +476,14 @@ nav ul li.active > a:before {
 .ajax-dropdown div li {
     list-style: none;
     font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .ajax-dropdown li a {
     line-height: normal;
     font-size: 14px;
     padding: 10px 10px 10px 11px;
-    color: #c0bbb7;
+    color: #4B4B4B !important;
     display: block;
     font-weight: 400;
     text-decoration: none !important;
@@ -553,7 +565,7 @@ div#inner-main {
 }
 
 .minified #main {
-    margin-left: 47px;
+    margin-left: 67px;
 }
 
 .minifiedRight #main {
@@ -581,7 +593,7 @@ tr.ng-scope {
 }
 
 .btn-group-justified > .btn, .btn-group-justified > .btn-group {
-    background: white;
+    background: #EEEEEE;
     height: 55px;
     border: none;
     color: #777777;
@@ -590,9 +602,26 @@ tr.ng-scope {
 }
 
 .btn-group-justified .btn.active, .btn:active {
-    background: white !important;
     border-top: 5px solid #98CA46;
     font-weight: bold;
+}
+
+.ui-grid-filter-container {
+    padding: 4px 5px;
+    position: relative;
+}
+
+.ui-grid-cell-contents.ng-binding.ng-scope {
+    margin-top: 5px;
+}
+
+.smart-style-4 nav > ul > li > a {
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.ui-grid-contents-wrapper {
+    margin-top: -15px;
 }
 
 .no-padding > .table-bordered, .no-padding > .table-responsive > .table-bordered {
@@ -646,7 +675,11 @@ tr.ng-scope {
 }
 
 .ui-grid-top-panel {
-    background: #EEEEEE;
+    background: #FAFAFA;
+}
+
+input[type="text"].ui-grid-filter-input {
+    border-color: #EEEEEE;
 }
 
 .ui-grid-header-cell-wrapper {
@@ -745,7 +778,7 @@ aside#right-panel {
     width: 0 !important;
     top: 80px !important;
     padding-top: 80px !important;
-    margin-right:-15px;
+    margin-right: -15px;
 }
 
 #filter-search {
@@ -1975,8 +2008,8 @@ div #right-panel-title h1 {
 
 .btn-primary {
     color: #fff;
-    background-color: #F36C22;
-    border-color: #F36C22;
+    background-color: #98CA46;
+    border-color: #98CA46;
 }
 
 button.form-btn {
@@ -1984,21 +2017,21 @@ button.form-btn {
 }
 
 .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
-    background-color: #F36C22;
-    border-color: #F36C22
+    background-color: #98CA46;
+    border-color: #98CA46
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #DE550C;
-    border-color: #DE550C;
+    background-color: #98CA46;
+    border-color: #98CA46;
     font-weight: bold;
 }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #DE550C;
-    border-color: #DE550C;
+    background-color: #98CA46;
+    border-color: #98CA46;
     font-weight: bold;
 }
 
@@ -2282,5 +2315,286 @@ section#widget-grid {
     -webkit-appearance: none;
 }
 
-/*==============================MODAL CSS====================*/
+/*==============================ADMIN CSS====================*/
 
+.p-h-20 {
+    padding: 0 20px;
+}
+
+
+.nav-tabs > li > a,
+.nav-tabs > li > a:focus {
+    margin-right: 0;
+    background-color: transparent;
+    border: none;
+    color: #666;
+    -webkit-box-shadow: inset 0 -1px 0 #ddd;
+    box-shadow: inset 0 -1px 0 #ddd;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus:hover {
+    background-color: transparent;
+}
+.nav-tabs{
+    border-bottom: none
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+    border: none;
+    background-color: transparent
+}
+
+.nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus:hover {
+    border: none;
+}
+
+.nav-tabs > li.disabled > a {
+    -webkit-box-shadow: inset 0 -1px 0 #ddd;
+    box-shadow: inset 0 -1px 0 #ddd;
+}
+
+.nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a:hover, .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover {
+    border: none !important;
+}
+
+.nav-tabs .dropdown-menu {
+    margin-top: 0;
+}
+
+.m-t-10 {
+    margin-top: 10px;
+}
+
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+}
+
+.timeline:before {
+    top: 10px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 1px;
+    background-color: #98CA46;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline > li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline > li:before {
+    content: " ";
+    display: table;
+}
+
+.timeline > li:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.timeline > li:before {
+    content: " ";
+    display: table;
+}
+
+.timeline > li:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.timeline > li > .timeline-panel {
+    width: 46%;
+    float: left;
+    position: relative;
+}
+
+.timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    content: " ";
+}
+
+.timeline > li > .timeline-badge {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1.4em;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    margin-left: -25px;
+    z-index: 100;
+    background: #FAFAFA;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+
+.timeline-title {
+    font-size: 14px;
+    margin: 0px;
+    font-weight: 500;
+}
+
+.timeline-body {
+    line-height: 17px;
+    margin-top: 5px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.timeline-body p {
+    margin-bottom: 5px;
+}
+
+ul.timeline:before {
+    left: 10px;
+}
+
+ul.timeline > li > .timeline-panel {
+    width: calc(100% - 40px);
+}
+
+ul.timeline > li > .timeline-badge {
+    left: -8px;
+    margin-left: 0;
+    top: -10px;
+    text-align: center;
+}
+
+ul.timeline > li > .timeline-panel {
+    float: right;
+}
+
+ul.timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+
+ul.timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+
+.theme-border, input[type="radio"]:checked:after,
+.theme-border-darken-1 {
+    border-color: #57BFEA;
+}
+
+.icon-circle {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border-width: 4px;
+    border-style: solid;
+    display: inline-flex;
+}
+
+.icon-color {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 35px;
+    box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.08);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 50%;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.icon-color:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+.nav-tabs > li.active > a {
+    -webkit-box-shadow: 0 -2px 0 #98CA46;
+    -moz-box-shadow: 0 -2px 0 #98CA46;
+    box-shadow: 0 -2px 0 #98CA46;
+    border-top-width: 5px !important;
+    margin-top: 1px !important;
+    font-weight: 700
+}
+
+.green {
+    background-color: #57BFEA;
+    color: #ffffff;
+    margin-top: -5px;
+    margin-right: 15px;
+}
+
+.blue {
+    background-color: #98CA46;
+    color: #ffffff;
+    margin-top: -5px;
+    margin-right: 15px;
+}
+
+.red {
+    background-color: #F47B54;
+    color: #ffffff;
+    margin-top: -5px;
+    margin-right: 15px;
+}
+
+.yellow {
+    background-color: #fff176;
+    color: #ffffff;
+    margin-top: -5px;
+    margin-right: 15px;
+}
+
+.ui-grid-cell-contents.ng-scope div.ng-binding {
+    margin-top: -25px;
+    margin-left: 50px;
+}

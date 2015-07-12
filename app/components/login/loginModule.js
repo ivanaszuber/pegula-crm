@@ -63,7 +63,7 @@ define([
                         templateUrl: 'components/dashboard/home/search/searchUsersView.html'
                     },
                     navigation: {
-                        templateUrl: 'components/dashboard/home/navigation/navigationView.html'
+                        templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                     }
                 }
 
