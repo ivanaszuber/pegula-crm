@@ -2,7 +2,7 @@
 
 ## Description
 
-Pegula CRM is a **CRM web application** for managing employees, candidates, organizations, tasks, messages and projects. It is under active development and currently has fully functional authentication (login) system, user (admin) and employee management system implemented.
+Pegula CRM is a **CRM web application** for managing employees, candidates, organizations, tasks, messages and projects. It is under active development and currently has a fully functional authentication (login) system, user (admin) and employee management system implemented.
 
 ## Technology Used
 
