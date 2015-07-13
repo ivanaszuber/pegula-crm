@@ -53,14 +53,14 @@ define(['appModule'], function (module) {
              * Updates the employee with the provided email and employee properties
              * and returns a promise
              * @param email
-             * @param employee
+             * @param user
              * @returns {*}
              */
-            'updateUser': function (email, employee) {
+            'updateUser': function (email, user) {
                 return apiService.request({
                     method: "PUT",
                     url: "/users/" + email,
-                    data: employee
+                    data: user
                 });
             },
 

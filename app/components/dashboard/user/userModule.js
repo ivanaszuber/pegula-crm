@@ -36,18 +36,18 @@ define([
                     views: {
                         "content@app": {
                             controller: 'userNewController',
-                            templateUrl: 'interfaces/management/user/userNewView.html',
+                            templateUrl: 'components/management/user/userNewView.html',
                             resolve: {
                                 deps: $couchPotatoProvider.resolveDependencies([
                                     'shared/apiServices/apiService',
                                     'shared/apiServices/userService',
-                                    'interfaces/management/user/userEmailDirective',
-                                    'interfaces/management/user/userPasswordDirective'
+                                    'components/management/user/userEmailDirective',
+                                    'components/management/user/userPasswordDirective'
                                 ])}
                             },
                         rightSidebar: {},
                         subHeader: {
-                            templateUrl: 'interfaces/management/browse/subHeader/subheaderView.html'
+                            templateUrl: 'components/management/browse/subHeader/subheaderView.html'
                         }
                     },
                     data: {
@@ -64,7 +64,7 @@ define([
                     views: {
                         "content@app": {
                             controller: 'userEditController',
-                            templateUrl: 'interfaces/management/user/userEditView.html',
+                            templateUrl: 'components/management/user/userEditView.html',
                             resolve: {
                                 deps: $couchPotatoProvider.resolveDependencies([
                                     'shared/apiServices/apiService',
@@ -73,10 +73,10 @@ define([
                             }
                         },
                         rightSidebar: {
-                            templateUrl: 'interfaces/management/approvals/rightSidebar/filterApprovalsView.html'
+                            templateUrl: 'components/management/approvals/rightSidebar/filterApprovalsView.html'
                         },
                         subHeader: {
-                            templateUrl: 'interfaces/management/browse/subHeader/subheaderView.html'
+                            templateUrl: 'components/management/browse/subHeader/subheaderView.html'
                         }
                     },
                     data: {

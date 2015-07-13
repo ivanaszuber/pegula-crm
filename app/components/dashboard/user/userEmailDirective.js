@@ -28,7 +28,7 @@ define(['appModule'], function (module) {
                     var value = modelValue || viewValue;
 
                     $http({
-                        url: 'http://localhost:8080/api/auth/users/' + value,
+                        url: 'http://localhost:5050/api/v1/users/' + value,
                         method: 'GET'
                     })
                         .success(angular.bind(this, function () {

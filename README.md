@@ -37,6 +37,21 @@ cd pegula-crm/config
 bower install
 ```
 
+## Testing
+
+To run unit tests install the dependencies by running:
+
+```
+cd pegula-crm
+
+npm install
+```
+
+This will install `karma`, `jasmine`, `angular-mocks` and other libraries necessary to run the tests.
+
+Start the karma server. This will execute all tests under the `pegula-crm/test` folder.
+
+
 ## Screenshots
 
 Here are some screenshots of the app. Demo will be available soon.
