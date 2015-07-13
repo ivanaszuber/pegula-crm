@@ -37,6 +37,32 @@ cd pegula-crm/config
 bower install
 ```
 
+## Build Script
+
+The build script is available in `grunt-tasks`. To create the build directory run the following
+
+```
+cd ..
+
+cd grunt/tasks
+
+npm install
+
+grunt
+
+```
+
+This will run the Gruntfile.js and:
+
+- concatenate all .js and .html files into a single .js file,
+- copy all necessary lib .js, .css and font files
+- minify all those files
+- append a hash to every file
+- and rename all references to those files so that they point to the correct hashed version
+
+
+After the build is finished, new files will be available at `pegula-crm/build`
+
 ## Testing
 
 To run unit tests install the dependencies by running:
@@ -50,6 +76,12 @@ npm install
 This will install `karma`, `jasmine`, `angular-mocks` and other libraries necessary to run the tests.
 
 Start the karma server. This will execute all tests under the `pegula-crm/test` folder.
+
+## UI Testing
+
+For testing purposes the following login credentials are available:
+
+- admin@pegula.io  admin
 
 
 ## Screenshots
