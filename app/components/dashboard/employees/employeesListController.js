@@ -107,6 +107,207 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                 }
 
             }
+
+            //When clicked on Tab Full-TIme
+            if (tab == 'Full-TIme') {
+                $scope.gridEmployees = {
+                    columnDefs: [
+                        {field: 'getFirstAndLastName()', displayName: 'Name'},
+                        {field: 'role', displayName: 'Role'},
+                        {field: 'email', displayName: 'Email'},
+                        {field: 'date_from', displayName: 'Date From', cellFilter: "date:'yyyy-MM-dd'", width:120},
+                        {field: 'date_to', displayName: 'Date To', cellFilter: "date:'yyyy-MM-dd'", width:120}
+                    ],
+                    data: 'employeeData',
+                    rowTemplate: 'components/dashboard/employees/gridRow/employeesRowView.html',
+                    enableRowSelection: true,
+                    enableRowHeaderSelection: false,
+                    multiSelect: false,
+                    modifierKeysToMultiSelect: false,
+                    noUnselect: true,
+                    enableHorizontalScrollbar: false,
+                    enableVerticalScrollbar: false,
+                    enableFiltering:true,
+                    headerRowHeight:50,
+                    rowHeight:50
+                };
+
+                employeeService.getEmployees().then(function (data) {
+                    angular.forEach(data, function (row) {
+                        row.getFirstAndLastName = function () {
+                            return this.first_name + ' ' + this.last_name;
+                        };
+                    });
+
+                    $scope.employeeData =  _.pluck(_.where(data, {'status': 'Full Time'}));
+
+                });
+
+                //we need a $rootScope function as this will be called from the
+                //filterController to update the data
+                //would be better to call a service function, but the grid doesn't refresh when it holds a reference
+                //to a service property
+                $rootScope.setEmployeeData = function(data){
+                    angular.forEach(data, function (row) {
+                        row.getFirstAndLastName = function () {
+                            return this.first_name + ' ' + this.last_name;
+                        }
+                    });
+                    $scope.employeeData =  data;
+                };
+
+                $scope.getName = function(name){
+                    return name;
+                };
+
+                $scope.getColor = function(color){
+                    return color;
+                };
+
+
+                $scope.gridEmployees.onRegisterApi = function (gridApi) {
+                    $scope.gridApi = gridApi;
+                    gridApi.selection.on.rowSelectionChanged($scope, function (row) {
+                        $rootScope.selectedEmployee = row.entity.email;
+                        $rootScope.rootEmployee = row.entity;
+                    });
+                }
+
+            }
+
+            //When clicked on Tab Contract
+            if (tab == 'Contract') {
+                $scope.gridEmployees = {
+                    columnDefs: [
+                        {field: 'getFirstAndLastName()', displayName: 'Name'},
+                        {field: 'role', displayName: 'Role'},
+                        {field: 'email', displayName: 'Email'},
+                        {field: 'date_from', displayName: 'Date From', cellFilter: "date:'yyyy-MM-dd'", width:120},
+                        {field: 'date_to', displayName: 'Date To', cellFilter: "date:'yyyy-MM-dd'", width:120}
+                    ],
+                    data: 'employeeData',
+                    rowTemplate: 'components/dashboard/employees/gridRow/employeesRowView.html',
+                    enableRowSelection: true,
+                    enableRowHeaderSelection: false,
+                    multiSelect: false,
+                    modifierKeysToMultiSelect: false,
+                    noUnselect: true,
+                    enableHorizontalScrollbar: false,
+                    enableVerticalScrollbar: false,
+                    enableFiltering:true,
+                    headerRowHeight:50,
+                    rowHeight:50
+                };
+
+                employeeService.getEmployees().then(function (data) {
+                    angular.forEach(data, function (row) {
+                        row.getFirstAndLastName = function () {
+                            return this.first_name + ' ' + this.last_name;
+                        };
+                    });
+
+                    $scope.employeeData =  _.pluck(_.where(data, {'status': 'Contract'}));
+
+                });
+
+                //we need a $rootScope function as this will be called from the
+                //filterController to update the data
+                //would be better to call a service function, but the grid doesn't refresh when it holds a reference
+                //to a service property
+                $rootScope.setEmployeeData = function(data){
+                    angular.forEach(data, function (row) {
+                        row.getFirstAndLastName = function () {
+                            return this.first_name + ' ' + this.last_name;
+                        }
+                    });
+                    $scope.employeeData =  data;
+                };
+
+                $scope.getName = function(name){
+                    return name;
+                };
+
+                $scope.getColor = function(color){
+                    return color;
+                };
+
+
+                $scope.gridEmployees.onRegisterApi = function (gridApi) {
+                    $scope.gridApi = gridApi;
+                    gridApi.selection.on.rowSelectionChanged($scope, function (row) {
+                        $rootScope.selectedEmployee = row.entity.email;
+                        $rootScope.rootEmployee = row.entity;
+                    });
+                }
+
+            }
+
+            //When clicked on Tab Candidates
+            if (tab == 'Candidates') {
+                $scope.gridEmployees = {
+                    columnDefs: [
+                        {field: 'getFirstAndLastName()', displayName: 'Name'},
+                        {field: 'role', displayName: 'Role'},
+                        {field: 'email', displayName: 'Email'},
+                        {field: 'date_from', displayName: 'Date From', cellFilter: "date:'yyyy-MM-dd'", width:120},
+                        {field: 'date_to', displayName: 'Date To', cellFilter: "date:'yyyy-MM-dd'", width:120}
+                    ],
+                    data: 'employeeData',
+                    rowTemplate: 'components/dashboard/employees/gridRow/employeesRowView.html',
+                    enableRowSelection: true,
+                    enableRowHeaderSelection: false,
+                    multiSelect: false,
+                    modifierKeysToMultiSelect: false,
+                    noUnselect: true,
+                    enableHorizontalScrollbar: false,
+                    enableVerticalScrollbar: false,
+                    enableFiltering:true,
+                    headerRowHeight:50,
+                    rowHeight:50
+                };
+
+                employeeService.getEmployees().then(function (data) {
+                    angular.forEach(data, function (row) {
+                        row.getFirstAndLastName = function () {
+                            return this.first_name + ' ' + this.last_name;
+                        };
+                    });
+
+                    $scope.employeeData =  _.pluck(_.where(data, {'status': 'Candidate'}));
+
+                });
+
+                //we need a $rootScope function as this will be called from the
+                //filterController to update the data
+                //would be better to call a service function, but the grid doesn't refresh when it holds a reference
+                //to a service property
+                $rootScope.setEmployeeData = function(data){
+                    angular.forEach(data, function (row) {
+                        row.getFirstAndLastName = function () {
+                            return this.first_name + ' ' + this.last_name;
+                        }
+                    });
+                    $scope.employeeData =  data;
+                };
+
+                $scope.getName = function(name){
+                    return name;
+                };
+
+                $scope.getColor = function(color){
+                    return color;
+                };
+
+
+                $scope.gridEmployees.onRegisterApi = function (gridApi) {
+                    $scope.gridApi = gridApi;
+                    gridApi.selection.on.rowSelectionChanged($scope, function (row) {
+                        $rootScope.selectedEmployee = row.entity.email;
+                        $rootScope.rootEmployee = row.entity;
+                    });
+                }
+
+            }
         };
 
 
