@@ -85,6 +85,20 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                         row.getFirstAndLastName = function () {
                             return this.first_name + ' ' + this.last_name;
                         }
+
+                        row.getStatusColor = function () {
+                            if (this.status === 'Full Time') {
+                                return 'md md-person-outline green icon-color';
+                            } if (this.status === 'Contract') {
+                                return 'md md-person-outline blue icon-color';
+                            } if (this.status === 'Candidate') {
+                                return 'md md-person-outline yellow icon-color';
+                            }
+                            else {
+                                return 'md md-person-outline red icon-color';
+                            };
+                        }
+
                     });
                     $scope.employeeData =  data;
                 };
@@ -153,7 +167,7 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                             return this.first_name + ' ' + this.last_name;
                         }
                     });
-                    $scope.employeeData =  data;
+                    $scope.employeeData =  _.pluck(_.where(data, {'status': 'Full Time'}));
                 };
 
                 $scope.getName = function(name){
@@ -220,7 +234,7 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                             return this.first_name + ' ' + this.last_name;
                         }
                     });
-                    $scope.employeeData =  data;
+                    $scope.employeeData =  _.pluck(_.where(data, {'status': 'Contract'}));
                 };
 
                 $scope.getName = function(name){
@@ -287,7 +301,7 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                             return this.first_name + ' ' + this.last_name;
                         }
                     });
-                    $scope.employeeData =  data;
+                    $scope.employeeData =  _.pluck(_.where(data, {'status': 'Candidate'}));
                 };
 
                 $scope.getName = function(name){

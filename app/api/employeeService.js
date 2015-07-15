@@ -91,7 +91,7 @@ define(['appModule'], function (module) {
                     'method': 'PATCH',
                     'url': '/employees/' + email,
                     'data': {
-                        'status': 'deactivated'
+                        'status': 'Deactivated'
                     }
                 })
             }
