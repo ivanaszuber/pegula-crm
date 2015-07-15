@@ -5,14 +5,14 @@ define(['appModule'], function (module) {
 
     'use strict';
 
-    module.registerController('employeeEditController', function ($scope, $state, userService, $rootScope) {
+    module.registerController('employeeEditController', function ($scope, $state, employeeService, $rootScope) {
 
         $scope.employee = {};
 
         /**
          * Get selected employee data
          */
-        userService.getUser($rootScope.selectedUser).then(function (data) {
+        employeeService.getEmployee($rootScope.selectedEmployee).then(function (data) {
             $scope.employee = data;
         })
 
@@ -22,10 +22,10 @@ define(['appModule'], function (module) {
          * display a success notification
          */
         $scope.update = function () {
-            userService.updateUser($rootScope.selectedUser, $scope.employee).then(function () {
+            employeeService.updateEmployee($rootScope.selectedEmployee, $scope.employee).then(function () {
                 $state.go('app.employees', {employeesType:'All'});
                 $.smallBox({
-                    title: "User "+ $scope.employee.first_name + ' ' + $scope.employee.last_name + ' has been modified.',
+                    title: "Employee "+ $scope.employee.first_name + ' ' + $scope.employee.last_name + ' has been modified.',
                     color: "#739E73",
                     iconSmall: "fa fa-check",
                     timeout: 5000
