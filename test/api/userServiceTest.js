@@ -334,7 +334,7 @@ define([
                         "roles": [
                             "admin"
                         ],
-                        "status": "active",
+                        "status": "deactivated",
                         "first_name": "Pegula",
                         "last_name": "admin",
                         "created": "2015-06-10T04:23:36.593089Z",
