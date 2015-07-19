@@ -1,44 +1,113 @@
-<form class="form-horizontal" ng-controller="employeeEditController" ng-submit="update()"
+<form class="form-horizontal" ng-controller="employeeEditController" ng-submit="update(employeeForm.$valid)" novalidate
       name="employeeForm">
     <header id="formHeader">
-        Modify Employee
+        Edit Employee {{employee.first_name + ' ' + employee.last_name}}
     </header>
     <hr>
-    <div class="form-group">
+    <div class="form-group"
+         ng-class="{ 'has-error' : employeeForm.firstName.$invalid && !employeeForm.firstName.$pristine && submitted || employeeForm.firstName.$error.required && submitted}">
         <label class="col-sm-3 control-label">First name:</label>
 
         <div class="col-sm-9">
-            <input type="text" class="form-control" ng-model="employee.first_name" name="firstName" edit-input disabled="true">
+            <input type="text" class="form-control" ng-model="employee.first_name" name="firstName" required>
+
+            <p ng-show="employeeForm.firstName.$error.required && submitted" class="help-block">First name is required.</p>
+
+            <p ng-show="employeeForm.firstName.$invalid && !employeeForm.firstName.$pristine" class="help-block">First name is
+                required.</p>
         </div>
     </div>
-    <div class="form-group">
+    <div class="form-group"
+         ng-class="{ 'has-error' : employeeForm.lastName.$invalid && !employeeForm.lastName.$pristine && submitted || employeeForm.lastName.$error.required && submitted}">
         <label class="col-sm-3 control-label">Last name:</label>
 
         <div class="col-sm-9">
-            <input type="text" class="form-control" ng-model="employee.last_name" name="lastName" edit-input disabled="true">
+            <input type="text" class="form-control" ng-model="employee.last_name" name="lastName" required>
+
+            <p ng-show="employeeForm.lastName.$error.required && submitted" class="help-block">Last name is required.</p>
+
+            <p ng-show="employeeForm.lastName.$invalid && !employeeForm.lastName.$pristine" class="help-block">Last name is
+                required.</p>
         </div>
     </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Roles:</label>
 
+        <div class="col-sm-9" id="role">
+            <select data-smart-select2 style="width:100%" class="select2" ng-model="employee.role"  name="select">
+                <option ng-repeat="role in employeeRoles" value="{{role}}">{{role}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Status:</label>
+
+        <div class="col-sm-9" id="status">
+            <select data-smart-select2 style="width:100%" class="select2" ng-model="employee.status"  name="select">
+                <option ng-repeat="status in employeeStatus" value="{{status}}">{{status}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Date From:</label>
+
+        <div class="col-sm-9" id="date_from">
+            <p class="input-group">
+                <input type="datetime" class="form-control" datepicker-popup ng-model="employee.date_from"
+                       is-open="mydp.openedDateFrom" close-text="Close" current-text="today"/>
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="openDateFrom($event)"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Date To:</label>
+
+        <div class="col-sm-9" id="date_to">
+            <p class="input-group">
+                <input type="datetime" class="form-control" datepicker-popup ng-model="employee.date_to"
+                       is-open="mydp.openedDateTo" close-text="Close" current-text="today"/>
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="openDateTo($event)"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+            </p>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : employeeForm.email.$invalid && submitted && !employeeForm.email.$pristine ||
+    employeeForm.email.$error.required && submitted ||
+    employeeForm.email.$error.email}">
+        <label class="col-sm-3 control-label">Email:</label>
+
+        <div class="col-sm-9">
+            <input type="email" name="email" class="form-control" ng-model="employee.email" employee-email
+                   ng-model-options="{ debounce: 100 }" required>
+
+            <p ng-show="employeeForm.email.$error.email" class="help-block">Email is already taken.</p>
+
+            <p ng-show="employeeForm.email.$error.required && submitted" class="help-block">Email is required.</p>
+
+            <p ng-show="employeeForm.email.$invalid && !employeeForm.email.$pristine && !employeeForm.email.$error.email"
+               class="help-block">Please enter a valid email.</p>
+        </div>
+    </div>
     <div class="form-group">
         <label class="col-sm-3 control-label">Phone:</label>
 
         <div class="col-sm-9">
-            <input type="text" class="form-control" ng-model="employee.phone" name="phone" edit-input disabled="true">
+            <input type="text" class="form-control" ng-model="employee.phone" name="phone">
         </div>
     </div>
-    <div class="form-group">
-        <label class="col-sm-3 control-label">Created on:</label>
 
-        <div class="col-sm-9">
-            <input type="text" class="form-control" ng-model="employee.created | date:'MM/dd/yyyy'" name="phone" disabled="true">
-        </div>
-    </div>
-    <div class="form-group" >
+    <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
-            <button type="submit" class="btn btn-primary form-btn" >Save</button>
+            <button type="submit" class="btn btn-primary form-btn">Save</button>
         </div>
         <div class="col-sm-3">
-            <button type="submit" class="btn btn-default form-btn" onclick="window.history.back()" >Cancel</button>
+            <button type="submit" class="btn btn-default form-btn" onclick="window.history.back()">Cancel</button>
         </div>
     </div>
 </form>
