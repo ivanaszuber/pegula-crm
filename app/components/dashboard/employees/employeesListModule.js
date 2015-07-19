@@ -39,7 +39,8 @@ define([
                                 'api/apiService',
                                 'api/userService',
                                 'components/dashboard/employees/employeesListService',
-                                'components/dashboard/employees/gridRow/employeesRowController'
+                                'components/dashboard/employees/gridRow/employeesRowController',
+                                'components/dashboard/employees/gridRow/employeeRowDirective'
                             ])
                         }
                     },

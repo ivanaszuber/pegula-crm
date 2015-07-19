@@ -21,6 +21,7 @@ define([
     'components/dashboard/employees/employeesListService',
     'components/dashboard/employees/employeesListController',
     'components/dashboard/employees/gridRow/employeesRowController',
+    'components/dashboard/employees/gridRow/employeeRowDirective',
 
     'components/dashboard/employee/employeeModule',
     'components/dashboard/employee/employeeEditController',

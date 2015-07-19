@@ -55,7 +55,7 @@ define([
                 })
 
                 .state('app.editEmployee', {
-                    url: '/employee/edit',
+                    url: '/employee/edit/:employee_id',
                     reloadOnSearch: false,
                     onEnter: function () {
                         $('body').removeClass("minifiedRight");
@@ -79,7 +79,12 @@ define([
                         }
                     },
                     data: {
-                        displayName: 'Edit User'
+                        displayName: '{{model.first_name + " " + model.last_name}}'
+                    },
+                    resolve: {
+                        model: function ($stateParams, employeeService) {
+                            return employeeService.getEmployee($stateParams.employee_id);
+                        }
                     }
 
                 })
