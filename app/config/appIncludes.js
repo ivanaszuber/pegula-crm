@@ -26,13 +26,17 @@ define([
     'components/dashboard/employee/employeeModule',
     'components/dashboard/employee/employeeEditController',
     'components/dashboard/employee/employeeNewController',
-    'components/dashboard/employee/employeeEmailDirective',
 
     'components/dashboard/user/userModule',
     'components/dashboard/user/userEditController',
     'components/dashboard/user/userNewController',
     'components/dashboard/user/userEmailDirective',
     'components/dashboard/user/userPasswordDirective',
+
+    'components/dashboard/users/usersListModule',
+    'components/dashboard/users/usersListController',
+    'components/dashboard/users/gridRow/usersRowController',
+    'components/dashboard/users/gridRow/userRowDirective',
 
     'components/dashboard/layout/activities/activitiesController',
     'components/dashboard/layout/activities/activitiesDirective',

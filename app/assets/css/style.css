@@ -629,9 +629,6 @@ tr.ng-scope {
     padding-bottom: 23px;
 }
 
-.ui-grid-contents-wrapper {
-    margin-top: -15px;
-}
 
 .no-padding > .table-bordered, .no-padding > .table-responsive > .table-bordered {
     border: none !important;

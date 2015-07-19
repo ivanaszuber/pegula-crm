@@ -24,7 +24,7 @@ define([
         userModule.config(function ($stateProvider, $couchPotatoProvider) {
 
             $stateProvider
-                .state('app.browse.newUser', {
+                .state('app.newUser', {
                     url: '/user/new',
                     reloadOnSearch: false,
                     onEnter: function () {
@@ -34,20 +34,20 @@ define([
                         $('body').removeClass("minifiedRight");
                     },
                     views: {
-                        "content@app": {
+                        "content": {
                             controller: 'userNewController',
-                            templateUrl: 'components/management/user/userNewView.html',
+                            templateUrl: 'components/dashboard/user/userNewView.html',
                             resolve: {
                                 deps: $couchPotatoProvider.resolveDependencies([
-                                    'shared/apiServices/apiService',
-                                    'shared/apiServices/userService',
-                                    'components/management/user/userEmailDirective',
-                                    'components/management/user/userPasswordDirective'
+                                    'api/apiService',
+                                    'api/userService',
+                                    'components/dashboard/user/userEmailDirective',
+                                    'components/dashboard/user/userPasswordDirective'
                                 ])}
                             },
-                        rightSidebar: {},
-                        subHeader: {
-                            templateUrl: 'components/management/browse/subHeader/subheaderView.html'
+                        search: {},
+                        navigation: {
+                            templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                         }
                     },
                     data: {
@@ -55,8 +55,8 @@ define([
                     }
                 })
 
-                .state('app.browse.editUser', {
-                    url: '/user/edit',
+                .state('app.editUser', {
+                    url: '/user/edit/:user_id',
                     reloadOnSearch: false,
                     onEnter: function () {
                         $('body').removeClass("minifiedRight");
@@ -64,19 +64,17 @@ define([
                     views: {
                         "content@app": {
                             controller: 'userEditController',
-                            templateUrl: 'components/management/user/userEditView.html',
+                            templateUrl: 'components/dashboard/user/userEditView.html',
                             resolve: {
                                 deps: $couchPotatoProvider.resolveDependencies([
-                                    'shared/apiServices/apiService',
-                                    'shared/apiServices/userService'
+                                    'api/apiService',
+                                    'api/userService'
                                 ])
                             }
                         },
-                        rightSidebar: {
-                            templateUrl: 'components/management/approvals/rightSidebar/filterApprovalsView.html'
-                        },
-                        subHeader: {
-                            templateUrl: 'components/management/browse/subHeader/subheaderView.html'
+                        search: {},
+                        navigation: {
+                            templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                         }
                     },
                     data: {

@@ -1,6 +1,7 @@
 /**
- * Created by Ivana on 14.5.2015..
+ * Created by Ivana on 19.7.2015..
  */
+
 define([
     'angular',
     'angular-couch-potato',
@@ -13,7 +14,7 @@ define([
 ], function (ng, couchPotato, _) {
     'use strict';
 
-    var employeesListModule = ng.module('employeesListModule', [
+    var usersListModule = ng.module('usersListModule', [
         'ui.router',
         'ngResource',
         'ui.grid',
@@ -22,25 +23,24 @@ define([
         'ui.bootstrap'
     ]);
 
-    couchPotato.configureApp(employeesListModule);
+    couchPotato.configureApp(usersListModule);
 
-    employeesListModule.config(function ($stateProvider, $couchPotatoProvider) {
+    usersListModule.config(function ($stateProvider, $couchPotatoProvider) {
 
         $stateProvider
-            .state('app.employees', {
-                url: '/:employeesType',
+            .state('app.users', {
+                url: '/users',
                 views: {
                     "content": {
-                        templateUrl: 'components/dashboard/employees/employeesListView.html',
-                        controller: 'employeesListController',
+                        templateUrl: 'components/dashboard/users/usersListView.html',
+                        controller: 'usersListController',
                         resolve: {
                             deps: $couchPotatoProvider.resolveDependencies([
                                 'api/authService',
                                 'api/apiService',
                                 'api/userService',
-                                'components/dashboard/employees/employeesListService',
-                                'components/dashboard/employees/gridRow/employeesRowController',
-                                'components/dashboard/employees/gridRow/employeeRowDirective'
+                                'components/dashboard/users/gridRow/usersRowController',
+                                'components/dashboard/users/gridRow/userRowDirective'
                             ])
                         }
                     },
@@ -55,7 +55,7 @@ define([
 
                 },
                 data: {
-                    displayName: 'Employees'
+                    displayName: 'Users'
                 }
 
             })
@@ -63,9 +63,9 @@ define([
 
     });
 
-    employeesListModule.run(function ($couchPotato) {
-        employeesListModule.lazy = $couchPotato;
+    usersListModule.run(function ($couchPotato) {
+        usersListModule.lazy = $couchPotato;
     });
 
-    return employeesListModule;
+    return usersListModule;
 });

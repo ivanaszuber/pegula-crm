@@ -41,7 +41,7 @@ define([
                                 deps: $couchPotatoProvider.resolveDependencies([
                                     'api/apiService',
                                     'api/userService',
-                                    'components/dashboard/employee/employeeEmailDirective'
+                                    'components/dashboard/user/userEmailDirective'
                                 ])}
                             },
                         search: {},

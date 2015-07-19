@@ -29,7 +29,8 @@ define([
         'dashboardModule',
         'employeeModule',
         'employeesListModule',
-        'userModule'
+        'userModule',
+        'usersListModule'
     ]);
 
     couchPotato.configureApp(appModule);

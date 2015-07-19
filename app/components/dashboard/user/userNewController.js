@@ -5,35 +5,23 @@ define(['appModule'], function (module) {
 
     "use strict";
 
-    module.registerController('userNewController', function ($scope, $state, organizationService, userService, rolesService, $sessionStorage) {
+    module.registerController('userNewController', function ($scope, $state, userService, $sessionStorage) {
 
-        $scope.userRoles = $sessionStorage.user.organization;
         $scope.submitted = false;
 
-        /**
-         * Get all roles that can be assigned to the user in the current organization
-         * @param organization
-         */
-        $scope.getRoles = function (organization) {
-            organizationService.getOrganization(organization)
-                .then(function (organization) {
-                    return rolesService.getRoles(organization.org_type)
-                })
-                .then(function (roles) {
-                    $scope.user = {
-                        'first_name': '',
-                        'last_name': '',
-                        'email': '',
-                        'roles': [],
-                        'phone': '',
-                        'organization': organization
-                    };
-                    $scope.userRoles = roles;
-                })
-        }
+        $scope.user = {
+            'first_name': '',
+            'last_name': '',
+            'email': '',
+            'roles': [],
+            'phone': '',
+            'client': "admin"
+        };
 
-
-        $scope.getRoles($sessionStorage.user.organization);
+        $scope.userRoles = ["Administrator",
+            "Project Manager",
+            "Organization Manager",
+            "Employee Manager"],
 
 
         /**
@@ -48,7 +36,7 @@ define(['appModule'], function (module) {
 
             if (isValid) {
                 userService.createUser($scope.user).then(function () {
-                    $state.go('app.browse', {browseType: 'Users'});
+                    $state.go('app.users', {usersType: 'All'});
                     $.smallBox({
                         title: "New user " + $scope.user.first_name + ' ' + $scope.user.last_name + ' has been created.',
                         color: "#739E73",
