@@ -21,7 +21,7 @@ define(['appModule'], function (module) {
         $scope.userRoles = ["Administrator",
             "Project Manager",
             "Organization Manager",
-            "Employee Manager"],
+            "Employee Manager"]
 
 
         /**
