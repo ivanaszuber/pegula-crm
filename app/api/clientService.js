@@ -10,15 +10,15 @@ define(['appModule'], function (module) {
         var clientService = {
 
             /**
-             * Gets the clients that matches the provided org_id
+             * Gets the clients that matches the provided id
              * and returns a promise
-             * @param org_id
+             * @param id
              * @returns {*}
              */
-            'getClient': function (org_id) {
+            'getClient': function (id) {
                 return apiService.request({
                     'method': "GET",
-                    'url': "/clients/" + org_id
+                    'url': "/clients/" + id
                 })
             },
 
@@ -39,13 +39,13 @@ define(['appModule'], function (module) {
              * the provided org_id and returns a promise
              * @param org_id
              */
-            'getOrgType': function (org_id) {
+            'getOrgType': function (id) {
                 var apiService = this;
                 apiService.request({
                     'method': "GET",
-                    'url': "/clients/" + org_id
+                    'url': "/clients/" + id
                 }).then(function (data) {
-                    return data.org_type;
+                    return data.type;
                 })
             }
         }

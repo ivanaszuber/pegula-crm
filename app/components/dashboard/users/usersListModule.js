@@ -31,14 +31,11 @@ define([
             .state('app.users', {
                 url: '/users',
                 views: {
-                    "content": {
+                    "content@app": {
                         templateUrl: 'components/dashboard/users/usersListView.html',
                         controller: 'usersListController',
                         resolve: {
                             deps: $couchPotatoProvider.resolveDependencies([
-                                'api/authService',
-                                'api/apiService',
-                                'api/userService',
                                 'components/dashboard/users/gridRow/usersRowController',
                                 'components/dashboard/users/gridRow/userRowDirective'
                             ])

@@ -21,6 +21,11 @@ define([
                     root: {
                         templateUrl: "components/login/loginView.html",
                         controller: 'loginController'
+                    },
+                    resolve: {
+                        authenticated: ['authService', function (authService) {
+                            return authService.authenticationStatus();
+                        }]
                     }
                 }
             })
@@ -33,9 +38,6 @@ define([
                             authService.logout();
                         },
                         resolve: {
-                            deps: $couchPotatoProvider.resolveDependencies([
-                                'api/authService'
-                            ]),
                             authenticated: ['authService', function (authService) {
                                 return authService.authenticationStatus();
                             }]

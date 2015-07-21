@@ -28,16 +28,13 @@ define([
 
         $stateProvider
             .state('app.employees', {
-                url: '/:employeesType',
+                url: '/employees/:employeesType',
                 views: {
-                    "content": {
+                    "content@app": {
                         templateUrl: 'components/dashboard/employees/employeesListView.html',
                         controller: 'employeesListController',
                         resolve: {
                             deps: $couchPotatoProvider.resolveDependencies([
-                                'api/authService',
-                                'api/apiService',
-                                'api/userService',
                                 'components/dashboard/employees/employeesListService',
                                 'components/dashboard/employees/gridRow/employeesRowController',
                                 'components/dashboard/employees/gridRow/employeeRowDirective'

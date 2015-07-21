@@ -25,7 +25,6 @@ define(['components/dashboard/employees/employeesListModule', 'lodash'], functio
                     "title": "CANDIDATES",
                     "name": "Candidates"
                 }],
-            'users': []
 
         };
         return employeesListService;

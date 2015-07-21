@@ -13,8 +13,18 @@ define(['components/dashboard/users/usersListModule'], function (module) {
                 {field: 'getFirstAndLastName()', displayName: 'Name'},
                 {field: 'email', displayName: 'Email'},
                 {field: 'created', displayName: 'Created Date', cellFilter: "date:'yyyy-MM-dd'", width:120},
-                {field: 'status', displayName: 'Status'}
-            ],
+                {field: 'status', displayName: 'Status',
+                    cellClass: function (grid, row, col, rowIndex, colIndex) {
+
+                        //if the user status is 'deactivated' set the .deactivated CSS class
+                        var val = grid.getCellValue(row, col);
+                        if (val === 'deactivated') {
+                            return 'deactivated';
+                        }
+                        else {
+                            return 'activated';
+                        }
+                    }}],
             data: 'userData',
             rowTemplate: 'components/dashboard/users/gridRow/usersRowView.html',
             enableRowSelection: true,
@@ -25,7 +35,7 @@ define(['components/dashboard/users/usersListModule'], function (module) {
             enableHorizontalScrollbar: false,
             enableVerticalScrollbar: false,
             enableFiltering:true,
-            headerRowHeight:50,
+            headerRowHeight:100,
             rowHeight:50
         };
 
@@ -50,7 +60,7 @@ define(['components/dashboard/users/usersListModule'], function (module) {
                     return this.first_name + ' ' + this.last_name;
                 }
             });
-            $scope.userData =  _.pluck(_.where(data, {'status': 'Full Time'}));
+            $scope.userData = data;
         };
 
         $scope.getName = function(name){

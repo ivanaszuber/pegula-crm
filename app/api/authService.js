@@ -142,7 +142,7 @@ define(['appModule'], function (module) {
                 if (this.authPromise == null || force) {
                     this.authPromise = this.request({
                         'method': "GET",
-                        'url': "/employee/"
+                        'url': "/users/"
                     })
                 }
                 var da = this;

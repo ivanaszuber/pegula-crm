@@ -26,9 +26,13 @@ define([
                         resolve: {
                             deps: $couchPotatoProvider.resolveDependencies([
                                 'components/dashboard/employees/employeesListController',
+                                'components/dashboard/users/usersListController',
                                 'components/dashboard/employee/employeeNewController',
                                 'components/dashboard/employee/employeeEditController',
+                                'components/dashboard/user/userNewController',
+                                'components/dashboard/user/userEditController',
                                 'components/login/loginInfoDirective'
+
                             ])
                         }
                     }

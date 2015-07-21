@@ -39,6 +39,11 @@ div#login-dropdown {
     font-weight: bold;
 }
 
+.activity-button {
+    color: #555555 !important;
+    cursor: pointer;
+}
+
 
 /*=================TOP HEADER=================*/
 .smart-style-4 #header {
@@ -508,12 +513,6 @@ nav ul li.active > a:before {
     line-height: 45px;
 }
 
-.activity-button {
-    color: #555555 !important;
-    margin-bottom: 17px;
-    cursor: pointer;
-}
-
 .ajax-dropdown:after {
     border-width: 0;
 }
@@ -688,6 +687,7 @@ tr.ng-scope {
 
 .ui-grid {
     border: 0px solid;
+    margin-top:-15px;
 }
 
 .ui-grid-top-panel {
@@ -713,6 +713,11 @@ input[type="text"].ui-grid-filter-input {
 .ui-grid-header-cell {
     width: 8%;
     border-right: 0px;
+    padding-top:25px;
+}
+
+.ui-grid-column-menu-button{
+    top:25px;
 }
 
 .ui-grid-canvas {

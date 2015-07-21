@@ -14,8 +14,7 @@ define(['appModule'], function (module) {
             'last_name': '',
             'email': '',
             'roles': [],
-            'phone': '',
-            'client': "admin"
+            'phone': ''
         };
 
         $scope.userRoles = ["Administrator",

@@ -7,36 +7,18 @@ define([
     'components/login/resetPasswordController',
     'api/authService',
 
-
     //API SERVICE
     'api/apiService',
     'api/userService',
     'api/clientService',
-    'api/rolesService',
     'api/employeeService',
 
     //components
     'components/dashboard/dashboardModule',
     'components/dashboard/employees/employeesListModule',
-    'components/dashboard/employees/employeesListService',
-    'components/dashboard/employees/employeesListController',
-    'components/dashboard/employees/gridRow/employeesRowController',
-    'components/dashboard/employees/gridRow/employeeRowDirective',
-
     'components/dashboard/employee/employeeModule',
-    'components/dashboard/employee/employeeEditController',
-    'components/dashboard/employee/employeeNewController',
-
     'components/dashboard/user/userModule',
-    'components/dashboard/user/userEditController',
-    'components/dashboard/user/userNewController',
-    'components/dashboard/user/userEmailDirective',
-    'components/dashboard/user/userPasswordDirective',
-
     'components/dashboard/users/usersListModule',
-    'components/dashboard/users/usersListController',
-    'components/dashboard/users/gridRow/usersRowController',
-    'components/dashboard/users/gridRow/userRowDirective',
 
     'components/dashboard/layout/activities/activitiesController',
     'components/dashboard/layout/activities/activitiesDirective',

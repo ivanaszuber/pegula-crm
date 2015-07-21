@@ -39,8 +39,6 @@ define([
                             templateUrl: 'components/dashboard/user/userNewView.html',
                             resolve: {
                                 deps: $couchPotatoProvider.resolveDependencies([
-                                    'api/apiService',
-                                    'api/userService',
                                     'components/dashboard/user/userEmailDirective',
                                     'components/dashboard/user/userPasswordDirective'
                                 ])}
@@ -64,13 +62,7 @@ define([
                     views: {
                         "content@app": {
                             controller: 'userEditController',
-                            templateUrl: 'components/dashboard/user/userEditView.html',
-                            resolve: {
-                                deps: $couchPotatoProvider.resolveDependencies([
-                                    'api/apiService',
-                                    'api/userService'
-                                ])
-                            }
+                            templateUrl: 'components/dashboard/user/userEditView.html'
                         },
                         search: {},
                         navigation: {
