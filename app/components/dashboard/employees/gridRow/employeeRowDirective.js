@@ -5,7 +5,7 @@
 define(['appModule'], function (module) {
         "use strict";
 
-        return module.directive('employeeRow', function ($state, $rootScope) {
+        return module.registerDirective('employeeRow', function ($state, $rootScope) {
 
                 return {
                     restrict: 'A',

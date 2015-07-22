@@ -99,7 +99,7 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                     rowTemplate: 'components/dashboard/employees/gridRow/employeesRowView.html'
                 };
 
-                $rootScope.setEmployeeData('Full-Time');
+                $rootScope.setEmployeeData('Full Time');
             }
 
             else if (tab == 'Contract') {

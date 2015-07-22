@@ -39,10 +39,10 @@ define([
                         templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                     }
                 },
-                data: {
+                data: { //breadcrumbs
                     displayName: 'Employees'
                 }
-            })
+            });
 
         //set the default gridOptions for all grids in the app
         $provide.decorator('GridOptions', function ($delegate) {
