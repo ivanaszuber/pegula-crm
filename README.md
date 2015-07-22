@@ -100,3 +100,6 @@ Here are some screenshots of the app. Demo will be available soon.
 
 ![](/demo/img/pegula-employee.PNG)
 
+### Create User
+
+![](/demo/img/pegula-user.PNG)

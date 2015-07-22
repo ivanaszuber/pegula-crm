@@ -5,7 +5,6 @@ define([
     'angular',
     'angular-mocks',
     'employeeEditController',
-    'employeeEmailDirective',
     'employeeModule',
     'employeeNewController',
 
@@ -26,6 +25,8 @@ define([
     'userEmailDirective',
     'userModule',
     'userNewController',
+    'usersListModule',
+    'usersListController',
     'userPasswordDirective',
 
     'dashboardModule',
@@ -39,7 +40,6 @@ define([
     'authService',
     'clientService',
     'employeeService',
-    'rolesService',
     'userService',
 
     'smartNotification'

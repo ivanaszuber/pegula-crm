@@ -145,7 +145,9 @@ module.exports = function (grunt) {
                 src: [
                     'lib/**/*.*',
                     'components/**/*.json',
+                    'components/dashboard/**/*.js',
                     'assets/**/*.png',
+                    'assets/**/*.jpg',
                     'assets/**/*.css',
                     'index.html',
                     'config/appConfig.js'

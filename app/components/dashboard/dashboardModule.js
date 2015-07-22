@@ -6,7 +6,7 @@ define([
 
     "use strict";
 
-    var dashboardModule = ng.module('dashboardModule', ['ui.router']);
+    var dashboardModule = ng.module('dashboardModule', []);
 
     couchPotato.configureApp(dashboardModule);
 
@@ -31,12 +31,11 @@ define([
                                 'components/dashboard/user/userNewController',
                                 'components/dashboard/user/userEditController',
                                 'components/login/loginInfoDirective'
-
                             ])
                         }
                     }
                 }
-            })
+            });
 
 
         $urlRouterProvider.otherwise('/login');
@@ -48,5 +47,4 @@ define([
     });
 
     return dashboardModule;
-
 });

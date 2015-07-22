@@ -111,20 +111,5 @@ define([
             });
         });
 
-        it('should set the sessionStorage.client to user.client', function () {
-            $httpBackend.expectGET('http://localhost:5050/api/v1/clients/Pegula');
-
-            $httpBackend.flush();
-
-            expect(sessionStorage.client).toEqual({
-                "org_id": "Pegula",
-                "created": "2015-06-10T04:19:35.919495Z",
-                "modified": "2015-06-10T04:19:35.919495Z",
-                "name": "Pegula",
-                "org_type": "admin"
-            })
-
-        });
-
     });
 });

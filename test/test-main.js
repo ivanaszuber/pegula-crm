@@ -45,7 +45,6 @@ require.config({
         'app': '../app/appModule',
 
         'employeeEditController':'../app/components/dashboard/employee/employeeEditController',
-        'employeeEmailDirective':'../app/components/dashboard/employee/employeeEmailDirective',
         'employeeModule':'../app/components/dashboard/employee/employeeModule',
         'employeeNewController':'../app/components/dashboard/employee/employeeNewController',
 
@@ -68,6 +67,9 @@ require.config({
         'userNewController':'../app/components/dashboard/user/userNewController',
         'userPasswordDirective':'../app/components/dashboard/user/userPasswordDirective',
 
+        'usersListModule':'../app/components/dashboard/users/usersListModule',
+        'usersListController':'../app/components/dashboard/users/usersListController',
+
         'dashboardModule':'../app/components/dashboard/dashboardModule',
 
         'loginModule':'../app/components/login/loginModule',
@@ -79,7 +81,6 @@ require.config({
         'authService':'../app/api/authService',
         'clientService':'../app/api/clientService',
         'employeeService':'../app/api/employeeService',
-        'rolesService':'../app/api/rolesService',
         'userService':'../app/api/userService',
 
         'smartNotification': '../app/lib/pegula-lib/js/SmartNotification.min'

@@ -22,6 +22,8 @@ define([
         'ngCookies',
         'ngResource',
         'ui.grid',
+        'ui.grid.selection',
+        'ui.grid.autoResize',
         'ngStorage',
         'checklist-model',
 
