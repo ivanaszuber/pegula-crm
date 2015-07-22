@@ -14,12 +14,11 @@ define([
 
         $stateProvider
             /**
-             * Main state of the ManageUI
+             * Main state of the app
              * This state is abstract, only the child states are used
              */
             .state('app', {
                 abstract: true,
-                reloadOnSearch: false,
                 views: {
                     root: {
                         templateUrl: 'components/dashboard/dashboardView.html',

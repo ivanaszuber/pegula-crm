@@ -64,7 +64,7 @@ define(['appModule'], function (module) {
             },
 
             /**
-             * Logs in the employee with the provided email and password
+             * Logs in the user with the provided email and password
              * and broadcasts the success message to be used by appController
              * @param email
              * @param password

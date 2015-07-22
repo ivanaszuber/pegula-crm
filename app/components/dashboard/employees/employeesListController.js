@@ -14,6 +14,7 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
         $scope.employeesType = $stateParams.employeesType;
 
         $scope.activeTab = $stateParams.employeesType;
+
         $scope.isActive = function (tab) {
             return $scope.activeTab == tab;
         };

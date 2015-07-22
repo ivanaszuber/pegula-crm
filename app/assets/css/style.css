@@ -488,6 +488,10 @@ nav ul li.active > a:before {
     padding-left: 20px;
 }
 
+#login-dropdown div li{
+    margin-bottom: 0;
+}
+
 .ajax-dropdown div li {
     list-style: none;
     font-size: 14px;
