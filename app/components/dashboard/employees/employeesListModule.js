@@ -11,10 +11,6 @@ define([
 
     var employeesListModule = ng.module('employeesListModule', []);
 
-    //adds the 'register' functions for registering and downloading components
-    //just-in-time and when needed. See http://laurelnaiad.github.io/angular-couch-potato/docs/#/guide/11-architecture.11-app-module-setup
-    couchPotato.configureApp(employeesListModule);
-
     employeesListModule.config(function ($stateProvider, $couchPotatoProvider, $provide) {
 
         $stateProvider
@@ -67,6 +63,10 @@ define([
             return gridOptions;
         });
     });
+
+    //adds the 'register' functions for registering and downloading components
+    //just-in-time and when needed. See http://laurelnaiad.github.io/angular-couch-potato/docs/#/guide/11-architecture.11-app-module-setup
+    couchPotato.configureApp(employeesListModule);
 
     employeesListModule.run(function ($couchPotato) {
         //See http://laurelnaiad.github.io/angular-couch-potato/docs/#/guide/11-architecture.11-app-module-setup

@@ -45,7 +45,7 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                         return this.first_name + ' ' + this.last_name;
                     };
                 });
-                if (status !== '') { //filter the data depending on the status
+                if (status) { //filter the data depending on the status
                     $scope.employeeData = _.pluck(_.where(data, {'status': status}));
                 } else {
                     $scope.employeeData = data;
@@ -83,7 +83,7 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                     rowTemplate: 'components/dashboard/employees/gridRow/employeesRowView.html'
                 };
 
-                $rootScope.setEmployeeData('');
+                $rootScope.setEmployeeData();
             }
 
             else if (tab == 'Full-Time') {
@@ -138,7 +138,6 @@ define(['components/dashboard/employees/employeesListModule'], function (module)
                 $scope.gridApi = gridApi;
                 gridApi.selection.on.rowSelectionChanged($scope, function (row) {
                     $rootScope.selectedEmployee = row.entity.email;
-                    $rootScope.rootEmployee = row.entity;
                 });
             }
         };
