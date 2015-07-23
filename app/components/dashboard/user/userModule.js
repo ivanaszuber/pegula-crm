@@ -43,7 +43,7 @@ define([
                                     'components/dashboard/user/userPasswordDirective'
                                 ])}
                             },
-                        search: {},
+                        rightSidebar: {},
                         navigation: {
                             templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                         }
@@ -64,7 +64,7 @@ define([
                             controller: 'userEditController',
                             templateUrl: 'components/dashboard/user/userEditView.html'
                         },
-                        search: {},
+                        rightSidebar: {},
                         navigation: {
                             templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                         }

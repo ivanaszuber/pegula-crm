@@ -42,7 +42,7 @@ define([
                                     'components/dashboard/user/userEmailDirective'
                                 ])}
                             },
-                        search: {},
+                        rightSidebar: {},
                         navigation: {
                             templateUrl: 'components/dashboard/layout/navigation/navigationView.html'
                         }
@@ -63,7 +63,7 @@ define([
                             controller: 'employeeEditController',
                             templateUrl: 'components/dashboard/employee/employeeEditView.html'
                         },
-                        search: {
+                        rightSidebar: {
                             templateUrl: 'components/dashboard/layout/rightSidebar/rightSidebarView.html'
                         },
                         navigation: {

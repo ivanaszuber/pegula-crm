@@ -42,7 +42,7 @@ define([
                         }
                     },
 
-                    search: {
+                    rightSidebar: {
                         templateUrl: 'components/dashboard/layout/rightSidebar/rightSidebarView.html'
                     },
 
